@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Портфолио wizoomm</title>
+    <link>https://wizoomm.github.io/</link>
+    <description>Recent content on Портфолио wizoomm</description>
+    <generator>Hugo -- 0.150.1</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Thu, 25 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wizoomm.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Добро пожаловать</title>
+      <link>https://wizoomm.github.io/posts/hello-world/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://wizoomm.github.io/posts/hello-world/</guid>
+      <description>&lt;p&gt;Привет!  Меня зовут &lt;strong&gt;Кручинина Дарья&lt;/strong&gt;, я студентка 4 курса Университета ИТМО.&lt;br&gt;
+Здесь я собираю своё портфолио проектов и учебных работ.&lt;/p&gt;
+&lt;p&gt;На сайте вы найдёте:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;информацию обо мне,&lt;/li&gt;
+&lt;li&gt;учебные проекты,&lt;/li&gt;
+&lt;li&gt;ссылки на полезные материалы.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Надеюсь, что здесь будет что-то интересное :)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>О себе</title>
+      <link>https://wizoomm.github.io/about/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://wizoomm.github.io/about/</guid>
+      <description>&lt;p&gt;Меня зовут &lt;strong&gt;Кручинина Дарья&lt;/strong&gt;, я учусь на 4 курсе в Университете ИТМО.&lt;br&gt;
+Мои интересы связаны с веб-дизайном, программированием и современными технологиями.&lt;/p&gt;
+&lt;p&gt;В рамках учёбы и личных проектов я занимаюсь:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;разработкой сайтов и интерфейсов,&lt;/li&gt;
+&lt;li&gt;изучением баз данных и алгоритмов,&lt;/li&gt;
+&lt;li&gt;исследованием новых технологий в области ИТ.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Мне нравится совмещать дизайн и техническую часть, делать проекты удобными и красивыми.&lt;br&gt;
+В будущем планирую развиваться в области продуктового и графического дизайна.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
