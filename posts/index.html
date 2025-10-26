@@ -144,6 +144,24 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Отчет по заданию из темы 6
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Используя LLM для объяснения, можно подробно разобрать выражение:
+console.time(&#39;a&#39;);((y = 2 ** 14 , x = Date.now()) =&gt; { while (Date.now() - x &lt; y) ;})();console.timeEnd(&#39;a&#39;);
+Этот код запускает таймер с меткой ‘a’, затем выполняет немедленно вызываемое функциональное выражение (IIFE — Immediately Invoked Function Expression).
+Внутри стрелочной функции задаются две локальные переменные со значениями по умолчанию:
+y = 2 ** 14 — вычисляет 2 в 14-й степени, что равно 16384 миллисекунды (примерно 16,384 секунды); x = Date.now() — получает текущее время в миллисекундах. Далее выполняется цикл while (Date.now() - x &lt; y) ;, который просто ожидает, пока разница между текущим временем и моментом старта x не превысит значение y. Это так называемое активное ожидание (busy-wait), при котором процессор постоянно проверяет условие, не выполняя других задач.
+После завершения ожидания вызывается console.timeEnd(&#39;a&#39;), который останавливает таймер и выводит прошедшее время. Результат в консоли примерно равен 16384 ms, то есть около 16 секунд.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-26 00:00:00 +0000 UTC'>October 26, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;wizoomm</footer>
+  <a class="entry-link" aria-label="post link to Отчет по заданию из темы 6" href="https://wizoomm.github.io/posts/report2/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Протокол HTTP. Клиент-серверное взаимодействие
     </h2>
   </header>

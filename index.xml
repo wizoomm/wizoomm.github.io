@@ -9,6 +9,22 @@
     <lastBuildDate>Sun, 26 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wizoomm.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Отчет по заданию из темы 6</title>
+      <link>https://wizoomm.github.io/posts/report2/</link>
+      <pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://wizoomm.github.io/posts/report2/</guid>
+      <description>&lt;p&gt;Используя LLM для объяснения, можно подробно разобрать выражение:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;console.time(&#39;a&#39;);((y = 2 ** 14 , x = Date.now()) =&amp;gt; { while (Date.now() - x &amp;lt; y) ;})();console.timeEnd(&#39;a&#39;);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Этот код запускает таймер с меткой &lt;strong&gt;&amp;lsquo;a&amp;rsquo;&lt;/strong&gt;, затем выполняет немедленно вызываемое функциональное выражение (IIFE — &lt;em&gt;Immediately Invoked Function Expression&lt;/em&gt;).&lt;br&gt;
+Внутри стрелочной функции задаются две локальные переменные со значениями по умолчанию:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;y = 2 ** 14&lt;/code&gt; — вычисляет 2 в 14-й степени, что равно &lt;strong&gt;16384 миллисекунды&lt;/strong&gt; (примерно &lt;strong&gt;16,384 секунды&lt;/strong&gt;);&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x = Date.now()&lt;/code&gt; — получает текущее время в миллисекундах.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Далее выполняется цикл &lt;code&gt;while (Date.now() - x &amp;lt; y) ;&lt;/code&gt;, который просто ожидает, пока разница между текущим временем и моментом старта &lt;code&gt;x&lt;/code&gt; не превысит значение &lt;code&gt;y&lt;/code&gt;. Это так называемое &lt;em&gt;активное ожидание&lt;/em&gt; (busy-wait), при котором процессор постоянно проверяет условие, не выполняя других задач.&lt;br&gt;
+После завершения ожидания вызывается &lt;code&gt;console.timeEnd(&#39;a&#39;)&lt;/code&gt;, который останавливает таймер и выводит прошедшее время. Результат в консоли примерно равен &lt;code&gt;16384 ms&lt;/code&gt;, то есть около &lt;strong&gt;16 секунд&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Протокол HTTP. Клиент-серверное взаимодействие</title>
       <link>https://wizoomm.github.io/posts/report/</link>
       <pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate>
