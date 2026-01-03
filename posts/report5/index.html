@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask | Портфолио wizoomm</title>
+<meta name="keywords" content="">
+<meta name="description" content="Ссылка на мой github
+1. Титульная часть
+Автор: Кручинина Дарья
+Группа: Р3468
+Дата: 2 января 2026
+Название работы: Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask
+
+2. Цель работы
+Изучить основные возможности Vue 3:
+
+Связывание данных (когда данные на странице меняются автоматически)
+События (когда пользователь что-то делает кликает, вводит текст)
+Computed свойства (вычисляемые значения, которые пересчитываются автоматически)
+Watch (отслеживание изменений в данных)
+Формы и работа с ними
+Условное отображение элементов (показывать/скрывать в зависимости от условий)
+Вывод списков задач, их сортировка и фильтрация
+Компоненты, передача данных между ними, события и слоты
+Маршрутизация (переход между страницами) через Vue Router
+
+Научиться работать с сервером (REST API), изучить основы создания сервера на Python Flask, научиться упаковывать приложение в Docker контейнеры и правильно оформить отчет по проекту.">
+<meta name="author" content="wizoomm">
+<link rel="canonical" href="https://wizoomm.github.io/posts/report5/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e1f5c4cae44599655f7ff95195ff89c8cb3adbda94f2b1581a434ab2b4d4e6cf.css" integrity="sha256-4fXEyuRFmWVff/lRlf&#43;JyMs629qU8rFYGkNKsrTU5s8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://wizoomm.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://wizoomm.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://wizoomm.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://wizoomm.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://wizoomm.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://wizoomm.github.io/posts/report5/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://wizoomm.github.io/posts/report5/">
+  <meta property="og:site_name" content="Портфолио wizoomm">
+  <meta property="og:title" content="Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask">
+  <meta property="og:description" content="Ссылка на мой github
+1. Титульная часть Автор: Кручинина Дарья
+Группа: Р3468 Дата: 2 января 2026 Название работы: Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask
+2. Цель работы Изучить основные возможности Vue 3:
+Связывание данных (когда данные на странице меняются автоматически) События (когда пользователь что-то делает кликает, вводит текст) Computed свойства (вычисляемые значения, которые пересчитываются автоматически) Watch (отслеживание изменений в данных) Формы и работа с ними Условное отображение элементов (показывать/скрывать в зависимости от условий) Вывод списков задач, их сортировка и фильтрация Компоненты, передача данных между ними, события и слоты Маршрутизация (переход между страницами) через Vue Router Научиться работать с сервером (REST API), изучить основы создания сервера на Python Flask, научиться упаковывать приложение в Docker контейнеры и правильно оформить отчет по проекту.">
+  <meta property="og:locale" content="ru-ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-02T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask">
+<meta name="twitter:description" content="Ссылка на мой github
+1. Титульная часть
+Автор: Кручинина Дарья
+Группа: Р3468
+Дата: 2 января 2026
+Название работы: Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask
+
+2. Цель работы
+Изучить основные возможности Vue 3:
+
+Связывание данных (когда данные на странице меняются автоматически)
+События (когда пользователь что-то делает кликает, вводит текст)
+Computed свойства (вычисляемые значения, которые пересчитываются автоматически)
+Watch (отслеживание изменений в данных)
+Формы и работа с ними
+Условное отображение элементов (показывать/скрывать в зависимости от условий)
+Вывод списков задач, их сортировка и фильтрация
+Компоненты, передача данных между ними, события и слоты
+Маршрутизация (переход между страницами) через Vue Router
+
+Научиться работать с сервером (REST API), изучить основы создания сервера на Python Flask, научиться упаковывать приложение в Docker контейнеры и правильно оформить отчет по проекту.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://wizoomm.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask",
+      "item": "https://wizoomm.github.io/posts/report5/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask",
+  "name": "Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask",
+  "description": "Ссылка на мой github\n1. Титульная часть Автор: Кручинина Дарья\nГруппа: Р3468 Дата: 2 января 2026 Название работы: Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask\n2. Цель работы Изучить основные возможности Vue 3:\nСвязывание данных (когда данные на странице меняются автоматически) События (когда пользователь что-то делает кликает, вводит текст) Computed свойства (вычисляемые значения, которые пересчитываются автоматически) Watch (отслеживание изменений в данных) Формы и работа с ними Условное отображение элементов (показывать/скрывать в зависимости от условий) Вывод списков задач, их сортировка и фильтрация Компоненты, передача данных между ними, события и слоты Маршрутизация (переход между страницами) через Vue Router Научиться работать с сервером (REST API), изучить основы создания сервера на Python Flask, научиться упаковывать приложение в Docker контейнеры и правильно оформить отчет по проекту.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Ссылка на мой github\n1. Титульная часть Автор: Кручинина Дарья\nГруппа: Р3468 Дата: 2 января 2026 Название работы: Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask\n2. Цель работы Изучить основные возможности Vue 3:\nСвязывание данных (когда данные на странице меняются автоматически) События (когда пользователь что-то делает кликает, вводит текст) Computed свойства (вычисляемые значения, которые пересчитываются автоматически) Watch (отслеживание изменений в данных) Формы и работа с ними Условное отображение элементов (показывать/скрывать в зависимости от условий) Вывод списков задач, их сортировка и фильтрация Компоненты, передача данных между ними, события и слоты Маршрутизация (переход между страницами) через Vue Router Научиться работать с сервером (REST API), изучить основы создания сервера на Python Flask, научиться упаковывать приложение в Docker контейнеры и правильно оформить отчет по проекту.\n3. Что было сделано 3.1. Фронтенд Компоненты (отдельные части интерфейса) AppHeader.vue — шапка сайта с меню\nСсылки на главную страницу, список задач и создание задачи Используется Vue Router для перехода между страницами AppFooter.vue — нижняя часть сайта\nTaskList.vue — компонент, который показывает список задач\nПолучает данные о задачах и настройках фильтров Использует computed свойства для фильтрации и сортировки списка Отправляет события при изменении статуса, редактировании или удалении задачи TaskItem.vue — компонент одной задачи\nПолучает данные об одной задаче Показывает информацию о задаче Отправляет события при действиях пользователя Использует слоты для дополнительной информации TaskForm.vue — форма для создания или редактирования задачи\nИспользует v-model для связи полей формы с данными Проверяет, что все нужные поля заполнены Отслеживает изменения данных через watch Использует компонент LayoutCard со слотами LayoutCard.vue — компонент-карточка с рамкой\nОбычный слот для основного содержимого Именованные слоты для шапки и подвала карточки Показывает шапку и подвал только если они есть Страницы Home.vue (/) — главная страница\nПриветственный экран с большим заголовком Кнопка для перехода к списку задач Переход осуществляется через router-link TasksList.vue (/tasks) — страница со списком задач\nПоказывает все задачи через v-for (цикл) Можно фильтровать по статусу (все / выполненные / невыполненные) Можно сортировать по дате добавления или по алфавиту Показывает сообщение, если задач нет Загружает данные при открытии страницы (mounted) TaskCreate.vue (/tasks/new) — страница создания задачи\nФорма с полями: заголовок, описание, приоритет, категория, флажок “Важно” Проверка, что все обязательные поля заполнены Отправка данных на сервер через API TaskEdit.vue (/tasks/:id/edit) — страница редактирования задачи\nТа же форма, что и для создания, но с уже заполненными данными Использует watch, чтобы загрузить данные задачи и заполнить форму NotFound.vue (/:pathMatch(.*)*) — страница 404\nПоказывается, когда пользователь переходит по несуществующей ссылке Кнопка для возврата на главную Переходы между страницами (маршрутизация) Все переходы реализованы через Vue Router Использованы именованные маршруты для удобства Навигация через this.$router.push() Динамические маршруты для редактирования (например, /tasks/1/edit, /tasks/2/edit) Computed свойства и Watch TaskList.vue: computed свойства filteredTasks и filteredAndSortedTasks для фильтрации и сортировки задач TaskForm.vue: watch для отслеживания загрузки данных задачи и заполнения формы при редактировании 3.2. Бэкенд (серверная часть на Python Flask) Методы для работы с данными (CRUD) GET /api/tasks — получить все задачи GET /api/tasks/ — получить одну задачу по её номеру POST /api/tasks — создать новую задачу PUT /api/tasks/ — обновить существующую задачу DELETE /api/tasks/ — удалить задачу Хранение данных Используется база данных SQLite (простая файловая база данных) Все данные хранятся в файле tasks.db Подключение через встроенную библиотеку Python sqlite3 Таблица создается автоматически при первом запуске приложения Структура таблицы tasks CREATE TABLE IF NOT EXISTS tasks ( id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, description TEXT, status TEXT DEFAULT 'pending', priority TEXT DEFAULT 'medium', category TEXT DEFAULT 'work', important INTEGER DEFAULT 0, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ) Таблица содержит поля:\nid — номер задачи (увеличивается автоматически) title — заголовок задачи (обязательное поле) description — описание задачи status — статус задачи (по умолчанию ‘pending’ - в работе) priority — приоритет (по умолчанию ‘medium’) category — категория (по умолчанию ‘work’) important — важная ли задача (0 или 1) created_at — когда создана (автоматически) updated_at — когда обновлена (автоматически) 3.3. Docker Frontend Dockerfile: файл для упаковки фронтенда в контейнер (сборка в несколько этапов: сначала Node.js для сборки проекта, потом Nginx для отдачи готовых файлов) Backend Dockerfile: файл для упаковки бэкенда в контейнер (используется образ Python 3.11) docker-compose.yml: файл для одновременного запуска фронтенда и бэкенда 4. Скриншоты интерфейса 4.1. Главная страница Приветственный экран с большим заголовком “TASK MANAGER” Кнопка “Перейти к задачам” 4.2. Список задач Все задачи показаны в виде карточек Можно фильтровать по статусу (Все / В работе / Выполненные) Можно сортировать (По дате добавления / По алфавиту) У каждой задачи есть кнопки: “Редактировать”, “Удалить”, “Изменить статус” 4.3. Фильтрация и сортировка Выпадающие списки для выбора фильтра и сортировки Фильтры применяются сразу благодаря computed свойствам 4.4. Форма создания задачи Поля: Заголовок (обязательное), Описание, Приоритет (выпадающий список), Категория (радио-кнопки), Флажок “Важно” Проверка формы перед отправкой Кнопки “Создать задачу” и “Отмена” 4.5. Форма редактирования Та же форма, что и для создания, но поля уже заполнены данными задачи Кнопка “Сохранить изменения” 4.6. Страница 404 Сообщение, что страница не найдена Кнопка для возврата на главную страницу 5. Примеры кода 5.1. Использование компонента TaskItem с событиями \u003cTaskItem v-for=\"task in filteredAndSortedTasks\" :key=\"task.id\" :task=\"task\" @toggle-status=\"handleToggleStatus\" @edit=\"handleEdit\" @delete=\"handleDelete\" /\u003e Этот код показывает, как используется компонент TaskItem. Для каждой задачи в отфильтрованном и отсортированном списке создается компонент TaskItem, которому передаются данные задачи. При действиях пользователя (изменение статуса, редактирование, удаление) вызываются соответствующие функции.\n5.2. Computed свойства для фильтрации и сортировки computed: { filteredTasks() { if (this.statusFilter === 'all') { return this.tasks } return this.tasks.filter(task =\u003e task.status === this.statusFilter) }, filteredAndSortedTasks() { const tasks = [...this.filteredTasks] if (this.sortBy === 'date') { return tasks.sort((a, b) =\u003e new Date(b.created_at) - new Date(a.created_at)) } else if (this.sortBy === 'alphabet') { return tasks.sort((a, b) =\u003e a.title.localeCompare(b.title)) } return tasks } } Это computed свойства, которые автоматически пересчитываются при изменении исходных данных. Первое свойство фильтрует задачи по статусу, второе сортирует отфильтрованные задачи.\n5.3. Использование слотов \u003ctemplate\u003e \u003cdiv class=\"layout-card\"\u003e \u003cdiv class=\"card-header\" v-if=\"$slots.header\"\u003e \u003cslot name=\"header\"\u003e\u003c/slot\u003e \u003c/div\u003e \u003cdiv class=\"card-body\"\u003e \u003cslot\u003e\u003c/slot\u003e \u003c/div\u003e \u003cdiv class=\"card-footer\" v-if=\"$slots.footer\"\u003e \u003cslot name=\"footer\"\u003e\u003c/slot\u003e \u003c/div\u003e \u003c/div\u003e \u003c/template\u003e \u003cLayoutCard\u003e \u003ctemplate #header\u003e \u003ch2\u003e{{ isEdit ? 'Редактирование задачи' : 'Создание новой задачи' }}\u003c/h2\u003e \u003c/template\u003e \u003cform @submit.prevent=\"handleSubmit\"\u003e ",
+  "wordCount" : "1522",
+  "inLanguage": "en",
+  "datePublished": "2026-01-02T00:00:00Z",
+  "dateModified": "2026-01-02T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "wizoomm"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wizoomm.github.io/posts/report5/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Портфолио wizoomm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wizoomm.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://wizoomm.github.io/" accesskey="h" title="Портфолио wizoomm (Alt + H)">Портфолио wizoomm</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://wizoomm.github.io/" title="Главная">
+                    <span>Главная</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wizoomm.github.io/about/" title="О себе">
+                    <span>О себе</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask
+    </h1>
+    <div class="post-meta"><span title='2026-01-02 00:00:00 +0000 UTC'>January 2, 2026</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;wizoomm
+
+</div>
+  </header> 
+  <div class="post-content"><p>Ссылка на мой <a href="https://github.com/wizoomm/TaskManager">github</a></p>
+<h2 id="1-титульная-часть">1. Титульная часть<a hidden class="anchor" aria-hidden="true" href="#1-титульная-часть">#</a></h2>
+<p><strong>Автор:</strong> Кручинина Дарья<br>
+<strong>Группа:</strong> Р3468
+<strong>Дата:</strong> 2 января 2026
+<strong>Название работы:</strong> Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask</p>
+<hr>
+<h2 id="2-цель-работы">2. Цель работы<a hidden class="anchor" aria-hidden="true" href="#2-цель-работы">#</a></h2>
+<p>Изучить основные возможности Vue 3:</p>
+<ul>
+<li>Связывание данных (когда данные на странице меняются автоматически)</li>
+<li>События (когда пользователь что-то делает кликает, вводит текст)</li>
+<li>Computed свойства (вычисляемые значения, которые пересчитываются автоматически)</li>
+<li>Watch (отслеживание изменений в данных)</li>
+<li>Формы и работа с ними</li>
+<li>Условное отображение элементов (показывать/скрывать в зависимости от условий)</li>
+<li>Вывод списков задач, их сортировка и фильтрация</li>
+<li>Компоненты, передача данных между ними, события и слоты</li>
+<li>Маршрутизация (переход между страницами) через Vue Router</li>
+</ul>
+<p>Научиться работать с сервером (REST API), изучить основы создания сервера на Python Flask, научиться упаковывать приложение в Docker контейнеры и правильно оформить отчет по проекту.</p>
+<hr>
+<h2 id="3-что-было-сделано">3. Что было сделано<a hidden class="anchor" aria-hidden="true" href="#3-что-было-сделано">#</a></h2>
+<h3 id="31-фронтенд">3.1. Фронтенд<a hidden class="anchor" aria-hidden="true" href="#31-фронтенд">#</a></h3>
+<h4 id="компоненты-отдельные-части-интерфейса">Компоненты (отдельные части интерфейса)<a hidden class="anchor" aria-hidden="true" href="#компоненты-отдельные-части-интерфейса">#</a></h4>
+<ol>
+<li>
+<p><strong>AppHeader.vue</strong> — шапка сайта с меню</p>
+<ul>
+<li>Ссылки на главную страницу, список задач и создание задачи</li>
+<li>Используется Vue Router для перехода между страницами</li>
+</ul>
+</li>
+<li>
+<p><strong>AppFooter.vue</strong> — нижняя часть сайта</p>
+</li>
+<li>
+<p><strong>TaskList.vue</strong> — компонент, который показывает список задач</p>
+<ul>
+<li>Получает данные о задачах и настройках фильтров</li>
+<li>Использует computed свойства для фильтрации и сортировки списка</li>
+<li>Отправляет события при изменении статуса, редактировании или удалении задачи</li>
+</ul>
+</li>
+<li>
+<p><strong>TaskItem.vue</strong> — компонент одной задачи</p>
+<ul>
+<li>Получает данные об одной задаче</li>
+<li>Показывает информацию о задаче</li>
+<li>Отправляет события при действиях пользователя</li>
+<li>Использует слоты для дополнительной информации</li>
+</ul>
+</li>
+<li>
+<p><strong>TaskForm.vue</strong> — форма для создания или редактирования задачи</p>
+<ul>
+<li>Использует v-model для связи полей формы с данными</li>
+<li>Проверяет, что все нужные поля заполнены</li>
+<li>Отслеживает изменения данных через watch</li>
+<li>Использует компонент LayoutCard со слотами</li>
+</ul>
+</li>
+<li>
+<p><strong>LayoutCard.vue</strong> — компонент-карточка с рамкой</p>
+<ul>
+<li>Обычный слот для основного содержимого</li>
+<li>Именованные слоты для шапки и подвала карточки</li>
+<li>Показывает шапку и подвал только если они есть</li>
+</ul>
+</li>
+</ol>
+<h4 id="страницы">Страницы<a hidden class="anchor" aria-hidden="true" href="#страницы">#</a></h4>
+<ol>
+<li>
+<p><strong>Home.vue</strong> (<code>/</code>) — главная страница</p>
+<ul>
+<li>Приветственный экран с большим заголовком</li>
+<li>Кнопка для перехода к списку задач</li>
+<li>Переход осуществляется через router-link</li>
+</ul>
+</li>
+<li>
+<p><strong>TasksList.vue</strong> (<code>/tasks</code>) — страница со списком задач</p>
+<ul>
+<li>Показывает все задачи через v-for (цикл)</li>
+<li>Можно фильтровать по статусу (все / выполненные / невыполненные)</li>
+<li>Можно сортировать по дате добавления или по алфавиту</li>
+<li>Показывает сообщение, если задач нет</li>
+<li>Загружает данные при открытии страницы (mounted)</li>
+</ul>
+</li>
+<li>
+<p><strong>TaskCreate.vue</strong> (<code>/tasks/new</code>) — страница создания задачи</p>
+<ul>
+<li>Форма с полями: заголовок, описание, приоритет, категория, флажок &ldquo;Важно&rdquo;</li>
+<li>Проверка, что все обязательные поля заполнены</li>
+<li>Отправка данных на сервер через API</li>
+</ul>
+</li>
+<li>
+<p><strong>TaskEdit.vue</strong> (<code>/tasks/:id/edit</code>) — страница редактирования задачи</p>
+<ul>
+<li>Та же форма, что и для создания, но с уже заполненными данными</li>
+<li>Использует watch, чтобы загрузить данные задачи и заполнить форму</li>
+</ul>
+</li>
+<li>
+<p><strong>NotFound.vue</strong> (<code>/:pathMatch(.*)*</code>) — страница 404</p>
+<ul>
+<li>Показывается, когда пользователь переходит по несуществующей ссылке</li>
+<li>Кнопка для возврата на главную</li>
+</ul>
+</li>
+</ol>
+<h4 id="переходы-между-страницами-маршрутизация">Переходы между страницами (маршрутизация)<a hidden class="anchor" aria-hidden="true" href="#переходы-между-страницами-маршрутизация">#</a></h4>
+<ul>
+<li>Все переходы реализованы через Vue Router</li>
+<li>Использованы именованные маршруты для удобства</li>
+<li>Навигация через this.$router.push()</li>
+<li>Динамические маршруты для редактирования (например, /tasks/1/edit, /tasks/2/edit)</li>
+</ul>
+<h4 id="computed-свойства-и-watch">Computed свойства и Watch<a hidden class="anchor" aria-hidden="true" href="#computed-свойства-и-watch">#</a></h4>
+<ul>
+<li><strong>TaskList.vue</strong>: computed свойства filteredTasks и filteredAndSortedTasks для фильтрации и сортировки задач</li>
+<li><strong>TaskForm.vue</strong>: watch для отслеживания загрузки данных задачи и заполнения формы при редактировании</li>
+</ul>
+<h3 id="32-бэкенд-серверная-часть-на-python-flask">3.2. Бэкенд (серверная часть на Python Flask)<a hidden class="anchor" aria-hidden="true" href="#32-бэкенд-серверная-часть-на-python-flask">#</a></h3>
+<h4 id="методы-для-работы-с-данными-crud">Методы для работы с данными (CRUD)<a hidden class="anchor" aria-hidden="true" href="#методы-для-работы-с-данными-crud">#</a></h4>
+<ol>
+<li><code>GET /api/tasks</code> — получить все задачи</li>
+<li><code>GET /api/tasks/&lt;id&gt;</code> — получить одну задачу по её номеру</li>
+<li><code>POST /api/tasks</code> — создать новую задачу</li>
+<li><code>PUT /api/tasks/&lt;id&gt;</code> — обновить существующую задачу</li>
+<li><code>DELETE /api/tasks/&lt;id&gt;</code> — удалить задачу</li>
+</ol>
+<h4 id="хранение-данных">Хранение данных<a hidden class="anchor" aria-hidden="true" href="#хранение-данных">#</a></h4>
+<ul>
+<li>Используется база данных SQLite (простая файловая база данных)</li>
+<li>Все данные хранятся в файле <code>tasks.db</code></li>
+<li>Подключение через встроенную библиотеку Python sqlite3</li>
+<li>Таблица создается автоматически при первом запуске приложения</li>
+</ul>
+<h4 id="структура-таблицы-tasks">Структура таблицы tasks<a hidden class="anchor" aria-hidden="true" href="#структура-таблицы-tasks">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> tasks (
+</span></span><span style="display:flex;"><span>    id INTEGER <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> AUTOINCREMENT,
+</span></span><span style="display:flex;"><span>    title TEXT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    description TEXT,
+</span></span><span style="display:flex;"><span>    status TEXT <span style="color:#66d9ef">DEFAULT</span> <span style="color:#e6db74">&#39;pending&#39;</span>,
+</span></span><span style="display:flex;"><span>    priority TEXT <span style="color:#66d9ef">DEFAULT</span> <span style="color:#e6db74">&#39;medium&#39;</span>,
+</span></span><span style="display:flex;"><span>    category TEXT <span style="color:#66d9ef">DEFAULT</span> <span style="color:#e6db74">&#39;work&#39;</span>,
+</span></span><span style="display:flex;"><span>    important INTEGER <span style="color:#66d9ef">DEFAULT</span> <span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>    created_at <span style="color:#66d9ef">TIMESTAMP</span> <span style="color:#66d9ef">DEFAULT</span> <span style="color:#66d9ef">CURRENT_TIMESTAMP</span>,
+</span></span><span style="display:flex;"><span>    updated_at <span style="color:#66d9ef">TIMESTAMP</span> <span style="color:#66d9ef">DEFAULT</span> <span style="color:#66d9ef">CURRENT_TIMESTAMP</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>Таблица содержит поля:</p>
+<ul>
+<li>id — номер задачи (увеличивается автоматически)</li>
+<li>title — заголовок задачи (обязательное поле)</li>
+<li>description — описание задачи</li>
+<li>status — статус задачи (по умолчанию &lsquo;pending&rsquo; - в работе)</li>
+<li>priority — приоритет (по умолчанию &lsquo;medium&rsquo;)</li>
+<li>category — категория (по умолчанию &lsquo;work&rsquo;)</li>
+<li>important — важная ли задача (0 или 1)</li>
+<li>created_at — когда создана (автоматически)</li>
+<li>updated_at — когда обновлена (автоматически)</li>
+</ul>
+<h3 id="33-docker">3.3. Docker<a hidden class="anchor" aria-hidden="true" href="#33-docker">#</a></h3>
+<ul>
+<li><strong>Frontend Dockerfile</strong>: файл для упаковки фронтенда в контейнер (сборка в несколько этапов: сначала Node.js для сборки проекта, потом Nginx для отдачи готовых файлов)</li>
+<li><strong>Backend Dockerfile</strong>: файл для упаковки бэкенда в контейнер (используется образ Python 3.11)</li>
+<li><strong>docker-compose.yml</strong>: файл для одновременного запуска фронтенда и бэкенда</li>
+</ul>
+<hr>
+<h2 id="4-скриншоты-интерфейса">4. Скриншоты интерфейса<a hidden class="anchor" aria-hidden="true" href="#4-скриншоты-интерфейса">#</a></h2>
+<h3 id="41-главная-страница">4.1. Главная страница<a hidden class="anchor" aria-hidden="true" href="#41-главная-страница">#</a></h3>
+<ul>
+<li>Приветственный экран с большим заголовком &ldquo;TASK MANAGER&rdquo;</li>
+<li>Кнопка &ldquo;Перейти к задачам&rdquo;</li>
+</ul>
+<p><img alt="Главная страница" loading="lazy" src="/images/11.png"></p>
+<h3 id="42-список-задач">4.2. Список задач<a hidden class="anchor" aria-hidden="true" href="#42-список-задач">#</a></h3>
+<ul>
+<li>Все задачи показаны в виде карточек</li>
+<li>Можно фильтровать по статусу (Все / В работе / Выполненные)</li>
+<li>Можно сортировать (По дате добавления / По алфавиту)</li>
+<li>У каждой задачи есть кнопки: &ldquo;Редактировать&rdquo;, &ldquo;Удалить&rdquo;, &ldquo;Изменить статус&rdquo;</li>
+</ul>
+<p><img alt="Список задач" loading="lazy" src="/images/21.png"></p>
+<h3 id="43-фильтрация-и-сортировка">4.3. Фильтрация и сортировка<a hidden class="anchor" aria-hidden="true" href="#43-фильтрация-и-сортировка">#</a></h3>
+<ul>
+<li>Выпадающие списки для выбора фильтра и сортировки</li>
+<li>Фильтры применяются сразу благодаря computed свойствам</li>
+</ul>
+<p><img alt="Фильтрация и сортировка" loading="lazy" src="/images/31.png"></p>
+<h3 id="44-форма-создания-задачи">4.4. Форма создания задачи<a hidden class="anchor" aria-hidden="true" href="#44-форма-создания-задачи">#</a></h3>
+<ul>
+<li>Поля: Заголовок (обязательное), Описание, Приоритет (выпадающий список), Категория (радио-кнопки), Флажок &ldquo;Важно&rdquo;</li>
+<li>Проверка формы перед отправкой</li>
+<li>Кнопки &ldquo;Создать задачу&rdquo; и &ldquo;Отмена&rdquo;</li>
+</ul>
+<p><img alt="Форма создания задачи" loading="lazy" src="/images/41.png"></p>
+<h3 id="45-форма-редактирования">4.5. Форма редактирования<a hidden class="anchor" aria-hidden="true" href="#45-форма-редактирования">#</a></h3>
+<ul>
+<li>Та же форма, что и для создания, но поля уже заполнены данными задачи</li>
+<li>Кнопка &ldquo;Сохранить изменения&rdquo;</li>
+</ul>
+<p><img alt="Форма редактирования" loading="lazy" src="/images/51.png"></p>
+<h3 id="46-страница-404">4.6. Страница 404<a hidden class="anchor" aria-hidden="true" href="#46-страница-404">#</a></h3>
+<ul>
+<li>Сообщение, что страница не найдена</li>
+<li>Кнопка для возврата на главную страницу</li>
+</ul>
+<p><img alt="Страница 404" loading="lazy" src="/images/61.png"></p>
+<hr>
+<h2 id="5-примеры-кода">5. Примеры кода<a hidden class="anchor" aria-hidden="true" href="#5-примеры-кода">#</a></h2>
+<h3 id="51-использование-компонента-taskitem-с-событиями">5.1. Использование компонента TaskItem с событиями<a hidden class="anchor" aria-hidden="true" href="#51-использование-компонента-taskitem-с-событиями">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span>&lt;<span style="color:#f92672">TaskItem</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">v-for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;task in filteredAndSortedTasks&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">:key</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;task.id&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">:task</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;task&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">toggle</span><span style="color:#f92672">-status</span><span style="color:#960050;background-color:#1e0010">=&#34;</span><span style="color:#a6e22e">handleToggleStatus</span><span style="color:#960050;background-color:#1e0010">&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">@edit</span><span style="color:#e6db74">=&#34;handleEdit&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">@delete</span><span style="color:#e6db74">=&#34;handleDelete&#34;</span>
+</span></span><span style="display:flex;"><span>/&gt;
+</span></span></code></pre></div><p>Этот код показывает, как используется компонент TaskItem. Для каждой задачи в отфильтрованном и отсортированном списке создается компонент TaskItem, которому передаются данные задачи. При действиях пользователя (изменение статуса, редактирование, удаление) вызываются соответствующие функции.</p>
+<h3 id="52-computed-свойства-для-фильтрации-и-сортировки">5.2. Computed свойства для фильтрации и сортировки<a hidden class="anchor" aria-hidden="true" href="#52-computed-свойства-для-фильтрации-и-сортировки">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">computed</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filteredTasks</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">statusFilter</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;all&#39;</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">tasks</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">tasks</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">task</span> =&gt; <span style="color:#a6e22e">task</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">statusFilter</span>)
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filteredAndSortedTasks</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tasks</span> <span style="color:#f92672">=</span> [...<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">filteredTasks</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sortBy</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;date&#39;</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">tasks</span>.<span style="color:#a6e22e">sort</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">created_at</span>) <span style="color:#f92672">-</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">created_at</span>))
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sortBy</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;alphabet&#39;</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">tasks</span>.<span style="color:#a6e22e">sort</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">localeCompare</span>(<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">title</span>))
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">tasks</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Это computed свойства, которые автоматически пересчитываются при изменении исходных данных. Первое свойство фильтрует задачи по статусу, второе сортирует отфильтрованные задачи.</p>
+<h3 id="53-использование-слотов">5.3. Использование слотов<a hidden class="anchor" aria-hidden="true" href="#53-использование-слотов">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span><span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">LayoutCard</span>.<span style="color:#a6e22e">vue</span> <span style="color:#f92672">--&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">template</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;layout-card&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-header&#34;</span> <span style="color:#f92672">v-if</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;$slots.header&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">slot</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;header&#34;</span>&gt;&lt;/<span style="color:#f92672">slot</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-body&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">slot</span>&gt;&lt;/<span style="color:#f92672">slot</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-footer&#34;</span> <span style="color:#f92672">v-if</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;$slots.footer&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">slot</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;footer&#34;</span>&gt;&lt;/<span style="color:#f92672">slot</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">Использование</span> <span style="color:#a6e22e">в</span> <span style="color:#a6e22e">TaskForm</span>.<span style="color:#a6e22e">vue</span> <span style="color:#f92672">--&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">LayoutCard</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">template</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">header</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h2</span>&gt;{{ <span style="color:#a6e22e">isEdit</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;Редактирование задачи&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Создание новой задачи&#39;</span> }}&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">template</span>&gt;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">form</span> <span style="color:#f92672">@submit.prevent</span><span style="color:#e6db74">=&#34;handleSubmit&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">&lt;!--</span> <span style="color:#a6e22e">Форма</span> <span style="color:#960050;background-color:#1e0010">--</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">form</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">LayoutCard</span>&gt;
+</span></span></code></pre></div><p>Слоты позволяют передавать HTML-код в компонент. Здесь используется именованный слот header для заголовка карточки.</p>
+<h3 id="54-использование-watch">5.4. Использование watch<a hidden class="anchor" aria-hidden="true" href="#54-использование-watch">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">watch</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">initialData</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">immediate</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">handler</span>(<span style="color:#a6e22e">newVal</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">newVal</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">formData</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">newVal</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">newVal</span>.<span style="color:#a6e22e">description</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Watch отслеживает изменения данных. Когда меняется initialData, автоматически заполняется форма данными задачи.</p>
+<h3 id="55-отправка-запросов-на-сервер">5.5. Отправка запросов на сервер<a hidden class="anchor" aria-hidden="true" href="#55-отправка-запросов-на-сервер">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// services/api.js
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">async</span> <span style="color:#a6e22e">getTasks</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/api/tasks&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">data</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">async</span> <span style="color:#a6e22e">createTask</span>(<span style="color:#a6e22e">taskData</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">post</span>(<span style="color:#e6db74">&#39;/api/tasks&#39;</span>, <span style="color:#a6e22e">taskData</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">data</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Это функции для отправки запросов на сервер. getTasks получает все задачи, createTask создает новую задачу.</p>
+<hr>
+<h2 id="6-структура-базы-данных-sqlite">6. Структура базы данных SQLite<a hidden class="anchor" aria-hidden="true" href="#6-структура-базы-данных-sqlite">#</a></h2>
+<p>Таблица <code>tasks</code> в файле <code>tasks.db</code>:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Поле</th>
+          <th>Тип</th>
+          <th>Описание</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>id</td>
+          <td>INTEGER</td>
+          <td>Номер задачи (увеличивается автоматически)</td>
+      </tr>
+      <tr>
+          <td>title</td>
+          <td>TEXT</td>
+          <td>Заголовок задачи</td>
+      </tr>
+      <tr>
+          <td>description</td>
+          <td>TEXT</td>
+          <td>Описание задачи</td>
+      </tr>
+      <tr>
+          <td>status</td>
+          <td>TEXT</td>
+          <td>Статус (pending - в работе, completed - выполнена)</td>
+      </tr>
+      <tr>
+          <td>priority</td>
+          <td>TEXT</td>
+          <td>Приоритет (low - низкий, medium - средний, high - высокий)</td>
+      </tr>
+      <tr>
+          <td>category</td>
+          <td>TEXT</td>
+          <td>Категория (work - работа, personal - личное, shopping - покупки, other - другое)</td>
+      </tr>
+      <tr>
+          <td>important</td>
+          <td>INTEGER</td>
+          <td>Важная ли задача (0 - нет, 1 - да)</td>
+      </tr>
+      <tr>
+          <td>created_at</td>
+          <td>TIMESTAMP</td>
+          <td>Дата создания</td>
+      </tr>
+      <tr>
+          <td>updated_at</td>
+          <td>TIMESTAMP</td>
+          <td>Дата обновления</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="пример-данных">Пример данных<a hidden class="anchor" aria-hidden="true" href="#пример-данных">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Отпраздновать новый год&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Съесть очень много салатов и мандаринов&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;status&#34;</span>: <span style="color:#e6db74">&#34;pending&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;priority&#34;</span>: <span style="color:#e6db74">&#34;high&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;personal&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;important&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;created_at&#34;</span>: <span style="color:#e6db74">&#34;2026-01-02T18:33:00&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;updated_at&#34;</span>: <span style="color:#e6db74">&#34;2026-01-02T18:33:00&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Выполнить задания по вебу&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Очень срочное выполнение&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;status&#34;</span>: <span style="color:#e6db74">&#34;pending&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;priority&#34;</span>: <span style="color:#e6db74">&#34;high&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;other&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;important&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;created_at&#34;</span>: <span style="color:#e6db74">&#34;2026-01-02T18:40:00&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;updated_at&#34;</span>: <span style="color:#e6db74">&#34;2026-01-02T18:40:00&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><hr>
+<h2 id="7-как-запустить-проект">7. Как запустить проект<a hidden class="anchor" aria-hidden="true" href="#7-как-запустить-проект">#</a></h2>
+<h3 id="71-запуск-через-docker-compose">7.1. Запуск через Docker Compose<a hidden class="anchor" aria-hidden="true" href="#71-запуск-через-docker-compose">#</a></h3>
+<ol>
+<li>
+<p>Нужно установить Docker и Docker Compose</p>
+</li>
+<li>
+<p>Скачать проект из репозитория:</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone <span style="color:#f92672">[</span>URL репозитория<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>cd TaskManager
+</span></span></code></pre></div><ol start="3">
+<li>Запустить проект:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose up --build
+</span></span></code></pre></div><ol start="4">
+<li>Открыть в браузере:</li>
+</ol>
+<ul>
+<li>Фронтенд: http://localhost:3000</li>
+<li>Бэкенд API: http://localhost:8000</li>
+</ul>
+<p>База данных SQLite создастся сама в файле <code>backend/tasks.db</code>.</p>
+<h3 id="72-запуск-без-docker-для-тестирования">7.2. Запуск без Docker (для тестирования)<a hidden class="anchor" aria-hidden="true" href="#72-запуск-без-docker-для-тестирования">#</a></h3>
+<h4 id="бэкенд">Бэкенд:<a hidden class="anchor" aria-hidden="true" href="#бэкенд">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd backend
+</span></span><span style="display:flex;"><span>pip install -r requirements.txt
+</span></span><span style="display:flex;"><span>python3 main.py
+</span></span></code></pre></div><p>База данных SQLite создастся сама в файле <code>tasks.db</code>.</p>
+<h4 id="фронтенд">Фронтенд:<a hidden class="anchor" aria-hidden="true" href="#фронтенд">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd frontend
+</span></span><span style="display:flex;"><span>npm install
+</span></span><span style="display:flex;"><span>npm run dev
+</span></span></code></pre></div><hr>
+<h2 id="8-что-я-изучила-в-процессе-работы">8. Что я изучила в процессе работы<a hidden class="anchor" aria-hidden="true" href="#8-что-я-изучила-в-процессе-работы">#</a></h2>
+<p>В процессе выполнения этого задания я изучила много нового. На фронтенде я освоила Vue 3: научилась работать с Options API, поняла как данные автоматически обновляют интерфейс, изучила основные директивы (v-if, v-for, v-model, v-bind, v-on). Я научилась создавать свои компоненты, передавать данные через props, обмениваться информацией между компонентами через события, а также использовать слоты. Особенно полезными оказались computed свойства для автоматических вычислений и watch для отслеживания изменений. Также я настроила Vue Router для перехода между страницами и научилась работать с формами, связывать поля с данными и проверять правильность заполнения.</p>
+<p>На бэкенде я изучила Python Flask: создавала API методы для работы с данными (создание, чтение, обновление, удаление), научилась обрабатывать разные HTTP методы (GET, POST, PUT, DELETE) и работать с JSON данными. Также я освоила работу с базой данных SQLite: научилась подключаться к базе через библиотеку sqlite3, выполнять SQL запросы и работать с файловой базой данных.</p>
+<p>Помимо этого, я изучила Docker: научилась создавать Dockerfile для фронтенда и бэкенда, поняла как работает сборка в несколько этапов, настроила Nginx для отдачи готового фронтенда.</p>
+<p>В целом, я научилась правильно организовывать структуру проекта, разделять код на компоненты, страницы и сервисы, использовать роутер для навигации и централизованно работать с API.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://wizoomm.github.io/posts/report4/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Интеграция Bootstrap 5 в приложение с luxon</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://wizoomm.github.io/">Портфолио wizoomm</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

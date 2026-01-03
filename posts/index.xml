@@ -4,10 +4,37 @@
     <title>Posts on Портфолио wizoomm</title>
     <link>https://wizoomm.github.io/posts/</link>
     <description>Recent content in Posts on Портфолио wizoomm</description>
-    <generator>Hugo -- 0.152.2</generator>
+    <generator>Hugo -- 0.154.2</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Thu, 30 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wizoomm.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask</title>
+      <link>https://wizoomm.github.io/posts/report5/</link>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://wizoomm.github.io/posts/report5/</guid>
+      <description>&lt;p&gt;Ссылка на мой &lt;a href=&#34;https://github.com/wizoomm/TaskManager&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-титульная-часть&#34;&gt;1. Титульная часть&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Автор:&lt;/strong&gt; Кручинина Дарья&lt;br&gt;
+&lt;strong&gt;Группа:&lt;/strong&gt; Р3468
+&lt;strong&gt;Дата:&lt;/strong&gt; 2 января 2026
+&lt;strong&gt;Название работы:&lt;/strong&gt; Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-цель-работы&#34;&gt;2. Цель работы&lt;/h2&gt;
+&lt;p&gt;Изучить основные возможности Vue 3:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Связывание данных (когда данные на странице меняются автоматически)&lt;/li&gt;
+&lt;li&gt;События (когда пользователь что-то делает кликает, вводит текст)&lt;/li&gt;
+&lt;li&gt;Computed свойства (вычисляемые значения, которые пересчитываются автоматически)&lt;/li&gt;
+&lt;li&gt;Watch (отслеживание изменений в данных)&lt;/li&gt;
+&lt;li&gt;Формы и работа с ними&lt;/li&gt;
+&lt;li&gt;Условное отображение элементов (показывать/скрывать в зависимости от условий)&lt;/li&gt;
+&lt;li&gt;Вывод списков задач, их сортировка и фильтрация&lt;/li&gt;
+&lt;li&gt;Компоненты, передача данных между ними, события и слоты&lt;/li&gt;
+&lt;li&gt;Маршрутизация (переход между страницами) через Vue Router&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Научиться работать с сервером (REST API), изучить основы создания сервера на Python Flask, научиться упаковывать приложение в Docker контейнеры и правильно оформить отчет по проекту.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Интеграция Bootstrap 5 в приложение с luxon</title>
       <link>https://wizoomm.github.io/posts/report4/</link>
