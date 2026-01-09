@@ -4,7 +4,7 @@
     <title>Портфолио wizoomm</title>
     <link>https://wizoomm.github.io/</link>
     <description>Recent content on Портфолио wizoomm</description>
-    <generator>Hugo -- 0.154.2</generator>
+    <generator>Hugo -- 0.154.3</generator>
     <language>ru-ru</language>
     <lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wizoomm.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -34,6 +34,25 @@
 &lt;li&gt;Маршрутизация (переход между страницами) через Vue Router&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Научиться работать с сервером (REST API), изучить основы создания сервера на Python Flask, научиться упаковывать приложение в Docker контейнеры и правильно оформить отчет по проекту.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Разработка веб-приложения для отображения текущего времени в реальном времени</title>
+      <link>https://wizoomm.github.io/posts/report6/</link>
+      <pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://wizoomm.github.io/posts/report6/</guid>
+      <description>&lt;p&gt;Ссылка на мой &lt;a href=&#34;https://github.com/wizoomm/luxon-bootstrap-vite&#34;&gt;github&lt;/a&gt; с заданием&lt;/p&gt;
+&lt;h2 id=&#34;описание-проекта&#34;&gt;Описание проекта&lt;/h2&gt;
+&lt;p&gt;Веб-приложение для отображения текущего времени в реальном времени. Приложение построено с использованием Bootstrap 5, Luxon для работы с датой и временем, и Vite в качестве инструмента сборки.&lt;/p&gt;
+&lt;h2 id=&#34;технологический-стек&#34;&gt;Технологический стек&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bootstrap 5.3.8&lt;/strong&gt; — CSS-фреймворк для стилизации&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Luxon 3.7.2&lt;/strong&gt; — библиотека для работы с датой и временем&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vite 7.2.4&lt;/strong&gt; — инструмент сборки и разработки&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sass 1.77.0&lt;/strong&gt; — препроцессор CSS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;интерфейс-приложения&#34;&gt;Интерфейс приложения&lt;/h2&gt;
+&lt;h3 id=&#34;главная-страница&#34;&gt;Главная страница&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;Главная страница&#34; loading=&#34;lazy&#34; src=&#34;https://wizoomm.github.io/images/first.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Интеграция Bootstrap 5 в приложение с luxon</title>
