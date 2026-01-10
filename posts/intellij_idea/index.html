@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Доклад про IntelliJ IDEA как среду разработки для веба | Портфолио wizoomm</title>
+<meta name="keywords" content="">
+<meta name="description" content="Ссылка на мой github с докладом
+В рамках данного доклада рассматривается, насколько среда разработки IntelliJ IDEA подходит для веб-разработки и какие инструменты она предоставляет фронтенд-разработчику.
+IntelliJ IDEA это программа, в которой разработчики пишут код. Обычно она известна как инструмент для Java, но многие не знают, что она очень сильная и удобная именно для веб-разработки.
+Её особенность в том, что она помогает писать код быстрее и с меньшим количеством ошибок. Это достигается за счёт умных подсказок, автоматического исправления, встроенных инструментов для отладки и работы с сервером.">
+<meta name="author" content="wizoomm">
+<link rel="canonical" href="https://wizoomm.github.io/posts/intellij_idea/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e1f5c4cae44599655f7ff95195ff89c8cb3adbda94f2b1581a434ab2b4d4e6cf.css" integrity="sha256-4fXEyuRFmWVff/lRlf&#43;JyMs629qU8rFYGkNKsrTU5s8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://wizoomm.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://wizoomm.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://wizoomm.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://wizoomm.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://wizoomm.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://wizoomm.github.io/posts/intellij_idea/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://wizoomm.github.io/posts/intellij_idea/">
+  <meta property="og:site_name" content="Портфолио wizoomm">
+  <meta property="og:title" content="Доклад про IntelliJ IDEA как среду разработки для веба">
+  <meta property="og:description" content="Ссылка на мой github с докладом
+В рамках данного доклада рассматривается, насколько среда разработки IntelliJ IDEA подходит для веб-разработки и какие инструменты она предоставляет фронтенд-разработчику.
+IntelliJ IDEA это программа, в которой разработчики пишут код. Обычно она известна как инструмент для Java, но многие не знают, что она очень сильная и удобная именно для веб-разработки.
+Её особенность в том, что она помогает писать код быстрее и с меньшим количеством ошибок. Это достигается за счёт умных подсказок, автоматического исправления, встроенных инструментов для отладки и работы с сервером.">
+  <meta property="og:locale" content="ru-ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-10T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Доклад про IntelliJ IDEA как среду разработки для веба">
+<meta name="twitter:description" content="Ссылка на мой github с докладом
+В рамках данного доклада рассматривается, насколько среда разработки IntelliJ IDEA подходит для веб-разработки и какие инструменты она предоставляет фронтенд-разработчику.
+IntelliJ IDEA это программа, в которой разработчики пишут код. Обычно она известна как инструмент для Java, но многие не знают, что она очень сильная и удобная именно для веб-разработки.
+Её особенность в том, что она помогает писать код быстрее и с меньшим количеством ошибок. Это достигается за счёт умных подсказок, автоматического исправления, встроенных инструментов для отладки и работы с сервером.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://wizoomm.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Доклад про IntelliJ IDEA как среду разработки для веба",
+      "item": "https://wizoomm.github.io/posts/intellij_idea/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Доклад про IntelliJ IDEA как среду разработки для веба",
+  "name": "Доклад про IntelliJ IDEA как среду разработки для веба",
+  "description": "Ссылка на мой github с докладом\nВ рамках данного доклада рассматривается, насколько среда разработки IntelliJ IDEA подходит для веб-разработки и какие инструменты она предоставляет фронтенд-разработчику.\nIntelliJ IDEA это программа, в которой разработчики пишут код. Обычно она известна как инструмент для Java, но многие не знают, что она очень сильная и удобная именно для веб-разработки.\nЕё особенность в том, что она помогает писать код быстрее и с меньшим количеством ошибок. Это достигается за счёт умных подсказок, автоматического исправления, встроенных инструментов для отладки и работы с сервером.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Ссылка на мой github с докладом\nВ рамках данного доклада рассматривается, насколько среда разработки IntelliJ IDEA подходит для веб-разработки и какие инструменты она предоставляет фронтенд-разработчику.\nIntelliJ IDEA это программа, в которой разработчики пишут код. Обычно она известна как инструмент для Java, но многие не знают, что она очень сильная и удобная именно для веб-разработки.\nЕё особенность в том, что она помогает писать код быстрее и с меньшим количеством ошибок. Это достигается за счёт умных подсказок, автоматического исправления, встроенных инструментов для отладки и работы с сервером.\nАвтодополнение (подсказки) IDE сама предлагает варианты кода:\nтеги HTML CSS-классы JavaScript функции названия переменных Эти подсказки контекстные, то есть она понимает, где это должно быть использовано.\nНапример, если есть класс .button в CSS, то в HTML его подсказка появится автоматически.\nLive Preview и live-рендеринг IntelliJ IDEA поддерживает встроенный предпросмотр HTML-страниц. Разработчик может одновременно видеть код и результат его выполнения внутри IDE. При изменении HTML-разметки, CSS-стилей или JavaScript-кода страница автоматически обновляется, что позволяет в «живом режиме» отслеживать изменения верстки без постоянного переключения в браузер.\nПоддержка Emmet Emmet — это инструмент, который помогает быстро писать HTML-разметку с помощью коротких сокращений.\nВместо того чтобы вручную писать много тегов, можно ввести короткую команду и нажать Tab и IDE сама разворачивает её в полноценную HTML-структуру.\nIntelliJ IDEA поддерживает Emmet из коробки — инструмент встроен по умолчанию и не требует установки дополнительных плагинов.\nПодсветка ошибок Если в коде есть опечатка или забываешь закрыть тег, то IntelliJ IDEA сразу подсветит проблемное место и предложит исправление. Это помогает не тратить время на поиск ошибок руками.\nПоддержка современных фреймворков (React, Vue, Angular) IntelliJ IDEA умеет работать с популярными библиотеками и фреймворками, которые сейчас используются в вебе.\nIntelliJ IDEA понимает синтаксис React-компонентов.\nОна подсвечивает JSX-разметку, видит компоненты как полноценные сущности, помогает их редактировать и рефакторить.\nIDE подсказывает React-хуки, свойства компонента, события, атрибуты JSX. Это ускоряет работу и снижает количество ошибок.\nЯ могу быстро перейти от использования компонента к его определению, переименовать компонент так, чтобы изменилось имя во всех файлах, и заранее увидеть ошибки в пропсах.\nЭто показывает, что IntelliJ IDEA не просто подсвечивает JavaScript, а действительно знает, как работает React и помогает разработчику строить интерфейсы быстрее и безопаснее.\nПоддержка Node.js и инструментов сборки IntelliJ IDEA поддерживает прямую работу с Node.js.\nЯ могу выполнять любые Node-команды, управлять пакетами и запускать сборку прямо из встроенного терминала, без переключения между окнами.\nОна понимает зависимости, показывает версии, помогает автоматически устанавливать пакеты и предлагает обновления\nСреда разработки позволяет запускать локальный сервер разработки без выхода из IDE.\nСсылки кликабельны, а лог удобочитаемый это сильно ускоряет процесс разработки.\nВстроенная отладка (debugger) В IntelliJ IDEA Ultimate для веб-разработки есть встроенный отладчик JavaScript и Node.js.\nОн позволяет ставить точки останова прямо в коде, запускать приложение в режиме Debug, пошагово выполнять строки, смотреть значения переменных и стек вызовов.\nОтладчик интегрирован с браузером Chrome: при запуске проекта IDE сама открывает вкладку, подключает devtools и показывает состояние кода прямо в окне IDE.\nПример запуска встроенного JavaScript Debugger в IntelliJ IDEA Ultimate: breakpoint в коде + отладка HTML-файла через браузер Chrome:\nПолноценная работа с API и backend IntelliJ IDEA позволяет легко работать с API и backend при разработке веб-приложений.\nНа этом примере я написала JavaScript-функцию, которая отправляет HTTP-запрос к публичному API.\nIntelliJ IDEA подсветила синтаксис, ошибки и помогла с автодополнением.\nПосле запуска страницы в браузере я вижу ответ сервера в виде JSON в консоли, а также вывожу данные на страницу.\nТаким образом, среда разработки полностью поддерживает работу с API, обработку данных и взаимодействие фронтенда с backend-частью приложения.\nВстроенная работа с базами данных IntelliJ IDEA умеет работать с SQL-файлами: подсвечивает синтаксис, форматирует запросы и помогает писать запросы правильно.\nВ версии Ultimate можно подключаться к реальным базам данных, выполнять команды и просматривать таблицы напрямую.\nЭто делает разработку backend и API удобнее, потому что все инструменты находятся внутри одной IDE.\nИнструменты IntelliJ IDEA позволяют подключаться к любой базе данных PostgreSQL, MySQL, SQLite, Oracle и др., выполнять SQL-запросы и просматривать структуру таблиц прямо из IDE\nGit и GitHub в IntelliJ IDEA IntelliJ IDEA имеет встроенную и очень удобную интеграцию с Git, GitHub и другими системами контроля версий.\nЯ могу отслеживать изменения в проекте, делать коммиты, создавать ветки, сравнивать версии файлов и отправлять проект на GitHub не выходя из IDE.\nПоказатель того, что Git отслеживает новые изменения:\nКак делается первый коммит:\nIntelliJ IDEA позволяет загрузить локальный проект на GitHub без использования терминала.\nПосле выполнения первого коммита достаточно выбрать команду “Share Project on GitHub”.\nIDE автоматически откроет окно авторизации, создаст репозиторий и отправит изменения на сервер.\nПлагины для веб-разработки IntelliJ IDEA поддерживает широкую экосистему плагинов, которые значительно расширяют возможности редактора при работе с веб-технологиями. Благодаря этим расширениям разработчик получает удобные инструменты для работы с HTML, CSS, JavaScript, фреймворками, API и системами контроля версий. Плагины делают IDE гибкой и позволяют адаптировать её под любой стек разработки.\nОдним из ключевых встроенных расширений является поддержка JavaScript и TypeScript, которая обеспечивает интеллектуальное автодополнение, анализ кода, быстрые подсказки и удобную навигацию. Плагин для HTML и CSS добавляет подсветку синтаксиса, проверки стилей, навигацию по классам (например, переход по Cmd+Click к определению класса в CSS) и встроенную поддержку Emmet, значительно ускоряющую написание разметки.\nIntelliJ IDEA предоставляет поддержку современных веб-фреймворков React, Vue.js, Vite, Webpack. Фреймворки фронтенда поддерживаются на уровне подсветки синтаксиса, автодополнения, навигации по компонентам и интеграции с инструментами сборки.\nНа скриншоте раздел официальной документации, где описаны возможности IDE при работе с Vue.js.\nIntelliJ IDEA включает встроенный HTTP Client, который позволяет выполнять HTTP-запросы прямо из редактора и просматривать ответы.\nВ Community Edition запуск запросов недоступен, но IDE всё равно распознаёт и подсвечивает .http-файлы, демонстрируя поддержку инструмента.\nДополнительно, в Ultimate-версии присутствует мощный плагин Database Tools, который позволяет подключаться к PostgreSQL, MySQL и другим базам данных, выполнять SQL-запросы, просматривать таблицы и визуализировать структуру базы данных.\nТаким образом, система плагинов IntelliJ IDEA позволяет превратить IDE в полноценную среду для веб-разработки: от написания HTML и стилизации интерфейсов до работы с API, фреймворками, GitHub и базами данных. Плагины делают процесс разработки быстрее, удобнее и более автоматизированным, что повышает продуктивность и снижает количество ошибок.\n",
+  "wordCount" : "976",
+  "inLanguage": "en",
+  "datePublished": "2026-01-10T00:00:00Z",
+  "dateModified": "2026-01-10T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "wizoomm"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wizoomm.github.io/posts/intellij_idea/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Портфолио wizoomm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wizoomm.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://wizoomm.github.io/" accesskey="h" title="Портфолио wizoomm (Alt + H)">Портфолио wizoomm</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://wizoomm.github.io/" title="Главная">
+                    <span>Главная</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wizoomm.github.io/about/" title="О себе">
+                    <span>О себе</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Доклад про IntelliJ IDEA как среду разработки для веба
+    </h1>
+    <div class="post-meta"><span title='2026-01-10 00:00:00 +0000 UTC'>January 10, 2026</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;wizoomm
+
+</div>
+  </header> 
+  <div class="post-content"><p>Ссылка на мой <a href="https://github.com/wizoomm/report_IntelliJ_IDEA">github</a> с докладом</p>
+<p>В рамках данного доклада рассматривается, насколько среда разработки IntelliJ IDEA подходит для веб-разработки и какие инструменты она предоставляет фронтенд-разработчику.</p>
+<p>IntelliJ IDEA это программа, в которой разработчики пишут код. Обычно она известна как инструмент для Java, но многие не знают, что она очень сильная и удобная именно для веб-разработки.</p>
+<p>Её особенность в том, что она помогает писать код быстрее и с меньшим количеством ошибок. Это достигается за счёт умных подсказок, автоматического исправления, встроенных инструментов для отладки и работы с сервером.</p>
+<p><img loading="lazy" src="images/imagesRep/1.png"></p>
+<h2 id="автодополнение-подсказки"><strong>Автодополнение (подсказки)</strong><a hidden class="anchor" aria-hidden="true" href="#автодополнение-подсказки">#</a></h2>
+<p>IDE сама предлагает варианты кода:</p>
+<ul>
+<li>теги HTML</li>
+<li>CSS-классы</li>
+<li>JavaScript функции</li>
+<li>названия переменных</li>
+</ul>
+<p>Эти подсказки контекстные, то есть она понимает, где это должно быть использовано.<br>
+Например, если есть класс .button в CSS, то в HTML его подсказка появится автоматически.</p>
+<p><img loading="lazy" src="images/imagesRep/2.png"><br>
+<img loading="lazy" src="images/imagesRep/3.png"></p>
+<h2 id="live-preview-и-live-рендеринг"><strong>Live Preview и live-рендеринг</strong><a hidden class="anchor" aria-hidden="true" href="#live-preview-и-live-рендеринг">#</a></h2>
+<p>IntelliJ IDEA поддерживает встроенный предпросмотр HTML-страниц. Разработчик может одновременно видеть код и результат его выполнения внутри IDE. При изменении HTML-разметки, CSS-стилей или JavaScript-кода страница автоматически обновляется, что позволяет в «живом режиме» отслеживать изменения верстки без постоянного переключения в браузер.</p>
+<p><img loading="lazy" src="images/imagesRep/4.png"></p>
+<p><img loading="lazy" src="images/imagesRep/5.png"></p>
+<h2></h2>
+<h2 id="поддержка-emmet"><strong>Поддержка Emmet</strong><a hidden class="anchor" aria-hidden="true" href="#поддержка-emmet">#</a></h2>
+<p>Emmet — это инструмент, который помогает быстро писать HTML-разметку с помощью коротких сокращений.</p>
+<p>Вместо того чтобы вручную писать много тегов, можно ввести короткую команду и нажать Tab и IDE сама разворачивает её в полноценную HTML-структуру.</p>
+<p>IntelliJ IDEA поддерживает Emmet из коробки — инструмент встроен по умолчанию и не требует установки дополнительных плагинов.</p>
+<p><img loading="lazy" src="images/imagesRep/6.png"></p>
+<p><img loading="lazy" src="images/imagesRep/7.png"></p>
+<h2></h2>
+<h2 id="подсветка-ошибок"><strong>Подсветка ошибок</strong><a hidden class="anchor" aria-hidden="true" href="#подсветка-ошибок">#</a></h2>
+<p>Если в коде есть опечатка или забываешь закрыть тег, то IntelliJ IDEA сразу подсветит проблемное место и предложит исправление. Это помогает не тратить время на поиск ошибок руками.</p>
+<p><img loading="lazy" src="images/imagesRep/8.png"></p>
+<h2 id="поддержка-современных-фреймворков-react-vue-angular"><strong>Поддержка современных фреймворков (React, Vue, Angular)</strong><a hidden class="anchor" aria-hidden="true" href="#поддержка-современных-фреймворков-react-vue-angular">#</a></h2>
+<p>IntelliJ IDEA умеет работать с популярными библиотеками и фреймворками, которые сейчас используются в вебе.</p>
+<p>IntelliJ IDEA понимает синтаксис React-компонентов.</p>
+<p>Она подсвечивает JSX-разметку, видит компоненты как полноценные сущности, помогает их редактировать и рефакторить.</p>
+<p><img loading="lazy" src="images/imagesRep/9.png"></p>
+<p>IDE подсказывает React-хуки, свойства компонента, события, атрибуты JSX. Это ускоряет работу и снижает количество ошибок.</p>
+<p><img loading="lazy" src="images/imagesRep/10.png"></p>
+<p>Я могу быстро перейти от использования компонента к его определению, переименовать компонент так, чтобы изменилось имя во всех файлах, и заранее увидеть ошибки в пропсах.</p>
+<p>Это показывает, что IntelliJ IDEA не просто подсвечивает JavaScript, а действительно знает, как работает React и помогает разработчику строить интерфейсы быстрее и безопаснее.</p>
+<h2 id="поддержка-nodejs-и-инструментов-сборки"><strong>Поддержка Node.js и инструментов сборки</strong><a hidden class="anchor" aria-hidden="true" href="#поддержка-nodejs-и-инструментов-сборки">#</a></h2>
+<p>IntelliJ IDEA поддерживает прямую работу с Node.js.</p>
+<p>Я могу выполнять любые Node-команды, управлять пакетами и запускать сборку прямо из встроенного терминала, без переключения между окнами.</p>
+<p><img loading="lazy" src="images/imagesRep/11.png"></p>
+<p>Она понимает зависимости, показывает версии, помогает автоматически устанавливать пакеты и предлагает обновления</p>
+<p><img loading="lazy" src="images/imagesRep/12.png"></p>
+<p>Среда разработки позволяет запускать локальный сервер разработки без выхода из IDE.</p>
+<p>Ссылки кликабельны, а лог удобочитаемый это сильно ускоряет процесс разработки.</p>
+<p><img loading="lazy" src="images/imagesRep/13.png"></p>
+<p><img loading="lazy" src="images/imagesRep/14.png"></p>
+<h2 id="встроенная-отладка-debugger"><strong>Встроенная отладка (debugger)</strong><a hidden class="anchor" aria-hidden="true" href="#встроенная-отладка-debugger">#</a></h2>
+<p>В IntelliJ IDEA Ultimate для веб-разработки есть встроенный отладчик JavaScript и Node.js.</p>
+<p>Он позволяет ставить точки останова прямо в коде, запускать приложение в режиме Debug, пошагово выполнять строки, смотреть значения переменных и стек вызовов.</p>
+<p>Отладчик интегрирован с браузером Chrome: при запуске проекта IDE сама открывает вкладку, подключает devtools и показывает состояние кода прямо в окне IDE.</p>
+<p>Пример запуска встроенного JavaScript Debugger в IntelliJ IDEA Ultimate: breakpoint в коде + отладка HTML-файла через браузер Chrome:</p>
+<p><img loading="lazy" src="images/imagesRep/15.png"></p>
+<h2 id="полноценная-работа-с-api-и-backend"><strong>Полноценная работа с API и backend</strong><a hidden class="anchor" aria-hidden="true" href="#полноценная-работа-с-api-и-backend">#</a></h2>
+<p>IntelliJ IDEA позволяет легко работать с API и backend при разработке веб-приложений.</p>
+<p>На этом примере я написала JavaScript-функцию, которая отправляет HTTP-запрос к публичному API.</p>
+<p>IntelliJ IDEA подсветила синтаксис, ошибки и помогла с автодополнением.</p>
+<p>После запуска страницы в браузере я вижу ответ сервера в виде JSON в консоли, а также вывожу данные на страницу.</p>
+<p>Таким образом, среда разработки полностью поддерживает работу с API, обработку данных и взаимодействие фронтенда с backend-частью приложения.</p>
+<p><img loading="lazy" src="images/imagesRep/16.png"></p>
+<h2 id="встроенная-работа-с-базами-данных"><strong>Встроенная работа с базами данных</strong><a hidden class="anchor" aria-hidden="true" href="#встроенная-работа-с-базами-данных">#</a></h2>
+<p>IntelliJ IDEA умеет работать с SQL-файлами: подсвечивает синтаксис, форматирует запросы и помогает писать запросы правильно.</p>
+<p>В версии Ultimate можно подключаться к реальным базам данных, выполнять команды и просматривать таблицы напрямую.</p>
+<p>Это делает разработку backend и API удобнее, потому что все инструменты находятся внутри одной IDE.</p>
+<p><img loading="lazy" src="images/imagesRep/17.png"></p>
+<p>Инструменты IntelliJ IDEA позволяют подключаться к любой базе данных PostgreSQL, MySQL, SQLite, Oracle и др., выполнять SQL-запросы и просматривать структуру таблиц прямо из IDE</p>
+<p><img loading="lazy" src="images/imagesRep/18.png"></p>
+<h2 id="git-и-github-в-intellij-idea"><strong>Git и GitHub в IntelliJ IDEA</strong><a hidden class="anchor" aria-hidden="true" href="#git-и-github-в-intellij-idea">#</a></h2>
+<p>IntelliJ IDEA имеет встроенную и очень удобную интеграцию с Git, GitHub и другими системами контроля версий.</p>
+<p>Я могу отслеживать изменения в проекте, делать коммиты, создавать ветки, сравнивать версии файлов и отправлять проект на GitHub не выходя из IDE.</p>
+<p>Показатель того, что Git отслеживает новые изменения:</p>
+<p><img loading="lazy" src="images/imagesRep/19.png"></p>
+<p>Как делается первый коммит:</p>
+<p><img loading="lazy" src="images/imagesRep/20.png"></p>
+<p><img loading="lazy" src="images/imagesRep/21.png"></p>
+<p>IntelliJ IDEA позволяет загрузить локальный проект на GitHub без использования терминала.</p>
+<p>После выполнения первого коммита достаточно выбрать команду “Share Project on GitHub”.</p>
+<p>IDE автоматически откроет окно авторизации, создаст репозиторий и отправит изменения на сервер.</p>
+<p><img loading="lazy" src="images/imagesRep/22.png"></p>
+<p><img loading="lazy" src="images/imagesRep/23.png"></p>
+<h2 id="плагины-для-веб-разработки"><strong>Плагины для веб-разработки</strong><a hidden class="anchor" aria-hidden="true" href="#плагины-для-веб-разработки">#</a></h2>
+<p>IntelliJ IDEA поддерживает широкую экосистему плагинов, которые значительно расширяют возможности редактора при работе с веб-технологиями. Благодаря этим расширениям разработчик получает удобные инструменты для работы с HTML, CSS, JavaScript, фреймворками, API и системами контроля версий. Плагины делают IDE гибкой и позволяют адаптировать её под любой стек разработки.</p>
+<p>Одним из ключевых встроенных расширений является поддержка <strong>JavaScript и TypeScript</strong>, которая обеспечивает интеллектуальное автодополнение, анализ кода, быстрые подсказки и удобную навигацию. Плагин для <strong>HTML и CSS</strong> добавляет подсветку синтаксиса, проверки стилей, навигацию по классам (например, переход по Cmd+Click к определению класса в CSS) и встроенную поддержку Emmet, значительно ускоряющую написание разметки.</p>
+<p><img loading="lazy" src="images/imagesRep/24.png"></p>
+<p>IntelliJ IDEA предоставляет поддержку современных веб-фреймворков React, Vue.js, Vite, Webpack. Фреймворки фронтенда поддерживаются на уровне подсветки синтаксиса, автодополнения, навигации по компонентам и интеграции с инструментами сборки.</p>
+<p>На скриншоте раздел официальной документации, где описаны возможности IDE при работе с Vue.js.</p>
+<p><img loading="lazy" src="images/imagesRep/25.png"></p>
+<p>IntelliJ IDEA включает встроенный HTTP Client, который позволяет выполнять HTTP-запросы прямо из редактора и просматривать ответы.</p>
+<p>В Community Edition запуск запросов недоступен, но IDE всё равно распознаёт и подсвечивает .http-файлы, демонстрируя поддержку инструмента.</p>
+<p><img loading="lazy" src="images/imagesRep/26.png"></p>
+<p>Дополнительно, в Ultimate-версии присутствует мощный плагин <strong>Database Tools</strong>, который позволяет подключаться к PostgreSQL, MySQL и другим базам данных, выполнять SQL-запросы, просматривать таблицы и визуализировать структуру базы данных.</p>
+<p>Таким образом, система плагинов IntelliJ IDEA позволяет превратить IDE в полноценную среду для веб-разработки: от написания HTML и стилизации интерфейсов до работы с API, фреймворками, GitHub и базами данных. Плагины делают процесс разработки быстрее, удобнее и более автоматизированным, что повышает продуктивность и снижает количество ошибок.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://wizoomm.github.io/posts/report5/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://wizoomm.github.io/">Портфолио wizoomm</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

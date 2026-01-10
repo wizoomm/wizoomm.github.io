@@ -6,8 +6,18 @@
     <description>Recent content on Портфолио wizoomm</description>
     <generator>Hugo -- 0.154.3</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wizoomm.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Доклад про IntelliJ IDEA как среду разработки для веба</title>
+      <link>https://wizoomm.github.io/posts/intellij_idea/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://wizoomm.github.io/posts/intellij_idea/</guid>
+      <description>&lt;p&gt;Ссылка на мой &lt;a href=&#34;https://github.com/wizoomm/report_IntelliJ_IDEA&#34;&gt;github&lt;/a&gt; с докладом&lt;/p&gt;
+&lt;p&gt;В рамках данного доклада рассматривается, насколько среда разработки IntelliJ IDEA подходит для веб-разработки и какие инструменты она предоставляет фронтенд-разработчику.&lt;/p&gt;
+&lt;p&gt;IntelliJ IDEA это программа, в которой разработчики пишут код. Обычно она известна как инструмент для Java, но многие не знают, что она очень сильная и удобная именно для веб-разработки.&lt;/p&gt;
+&lt;p&gt;Её особенность в том, что она помогает писать код быстрее и с меньшим количеством ошибок. Это достигается за счёт умных подсказок, автоматического исправления, встроенных инструментов для отладки и работы с сервером.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Разработка SPA-приложения «Менеджер задач» на Vue 3 с сервером на Python Flask</title>
       <link>https://wizoomm.github.io/posts/report5/</link>
