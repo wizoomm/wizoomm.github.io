@@ -71,5 +71,15 @@
 &lt;li&gt;Учебные и pet-проекты&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
+    <item>
+      <title>BC</title>
+      <link>https://wizoomm.github.io/posts/bc/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://wizoomm.github.io/posts/bc/</guid>
+      <description>&lt;p&gt;Ссылка на мой &lt;a href=&#34;&#34;&gt;github&lt;/a&gt; с проектом&lt;/p&gt;
+&lt;h2 id=&#34;описание&#34;&gt;Описание&lt;/h2&gt;
+&lt;h2 id=&#34;технологии&#34;&gt;Технологии&lt;/h2&gt;
+&lt;h2 id=&#34;особенности&#34;&gt;Особенности&lt;/h2&gt;</description>
+    </item>
   </channel>
 </rss>
