@@ -5,12 +5,72 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>BC | Портфолио wizoomm</title>
+<title>Beauty Club — Сайт студии красоты | Портфолио wizoomm</title>
 <meta name="keywords" content="">
-<meta name="description" content="Ссылка на мой github с проектом
-Описание
-Технологии
-Особенности">
+<meta name="description" content="
+Демо
+Сайт: https://se.ifmo.ru/~s368382/bc/index.html
+Репозиторий: https://github.com/wizoomm/bc.git
+Описание проекта
+Учебный проект — веб-сайт для студии красоты &ldquo;Beauty Club&rdquo; — студии маникюра, педикюра и лазерной эпиляции, расположенной в Санкт-Петербурге. Сайт предоставляет полную информацию о студии, услугах, специалистах и позволяет клиентам оставлять заявки на консультацию.
+Основные возможности
+
+Адаптивный дизайн — сайт корректно отображается на всех устройствах (десктоп, планшет, мобильные)
+Интерактивная форма записи — валидация данных на клиенте и сервере
+Интеграция с базой данных — сохранение заявок в PostgreSQL
+Многостраничная структура — удобная навигация по разделам сайта
+Галерея работ — демонстрация портфолио студии
+Информация о специалистах — профили мастеров с опытом работы
+
+Технологический стек
+Frontend
+
+HTML5 — семантическая разметка
+CSS3 — стилизация с использованием кастомных шрифтов (Helvetica Neue)
+JavaScript (Vanilla) — интерактивность без фреймворков
+
+Валидация форм в реальном времени
+Маски ввода для телефона
+Управление состояниями формы (форма/успех)
+Адаптивное бургер-меню
+
+
+
+Backend
+
+PHP — обработка форм и работа с базой данных
+PostgreSQL — хранение заявок на консультацию
+
+Структура проекта
+bc/
+├── index.html              # Главная страница
+├── about.html              # О нас
+├── services.html           # Услуги и цены
+├── recording.html          # Страница записи
+├── shares.html             # Акции
+├── recommendations.html    # Рекомендации
+├── questions.html          # Вопросы и ответы
+├── gallery.html            # Галерея работ
+├── reviews.html            # Отзывы клиентов
+├── specialists.html        # Специалисты
+├── css/
+│   ├── normalize.css      # Сброс стилей
+│   └── styles.css          # Основные стили
+├── js/
+│   ├── booking.js          # Логика формы записи
+│   ├── burger.js            # Бургер-меню
+│   └── form-validation.js   # Валидация форм
+├── img/                    # Изображения (логотипы, фото специалистов, работы)
+├── pic/                    # Материалы для отчета
+│   ├── video.gif           # Видео демонстрации
+│   ├── home.png            # Скриншот главной страницы
+│   ├── form.png            # Скриншот формы
+│   └── price.png           # Скриншот страницы услуг
+├── db.php                  # Подключение к базе данных
+└── submit.php              # Обработка формы записи
+Функциональность
+Форма записи на консультацию
+Форма включает:">
 <meta name="author" content="wizoomm">
 <link rel="canonical" href="https://wizoomm.github.io/posts/bc/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.e1f5c4cae44599655f7ff95195ff89c8cb3adbda94f2b1581a434ab2b4d4e6cf.css" integrity="sha256-4fXEyuRFmWVff/lRlf&#43;JyMs629qU8rFYGkNKsrTU5s8=" rel="preload stylesheet" as="style">
@@ -60,20 +120,83 @@
     </style>
 </noscript><meta property="og:url" content="https://wizoomm.github.io/posts/bc/">
   <meta property="og:site_name" content="Портфолио wizoomm">
-  <meta property="og:title" content="BC">
-  <meta property="og:description" content="Ссылка на мой github с проектом
-Описание Технологии Особенности">
+  <meta property="og:title" content="Beauty Club — Сайт студии красоты">
+  <meta property="og:description" content="
+Демо Сайт: https://se.ifmo.ru/~s368382/bc/index.html
+Репозиторий: https://github.com/wizoomm/bc.git
+Описание проекта Учебный проект — веб-сайт для студии красоты “Beauty Club” — студии маникюра, педикюра и лазерной эпиляции, расположенной в Санкт-Петербурге. Сайт предоставляет полную информацию о студии, услугах, специалистах и позволяет клиентам оставлять заявки на консультацию.
+Основные возможности Адаптивный дизайн — сайт корректно отображается на всех устройствах (десктоп, планшет, мобильные) Интерактивная форма записи — валидация данных на клиенте и сервере Интеграция с базой данных — сохранение заявок в PostgreSQL Многостраничная структура — удобная навигация по разделам сайта Галерея работ — демонстрация портфолио студии Информация о специалистах — профили мастеров с опытом работы Технологический стек Frontend HTML5 — семантическая разметка CSS3 — стилизация с использованием кастомных шрифтов (Helvetica Neue) JavaScript (Vanilla) — интерактивность без фреймворков Валидация форм в реальном времени Маски ввода для телефона Управление состояниями формы (форма/успех) Адаптивное бургер-меню Backend PHP — обработка форм и работа с базой данных PostgreSQL — хранение заявок на консультацию Структура проекта bc/ ├── index.html # Главная страница ├── about.html # О нас ├── services.html # Услуги и цены ├── recording.html # Страница записи ├── shares.html # Акции ├── recommendations.html # Рекомендации ├── questions.html # Вопросы и ответы ├── gallery.html # Галерея работ ├── reviews.html # Отзывы клиентов ├── specialists.html # Специалисты ├── css/ │ ├── normalize.css # Сброс стилей │ └── styles.css # Основные стили ├── js/ │ ├── booking.js # Логика формы записи │ ├── burger.js # Бургер-меню │ └── form-validation.js # Валидация форм ├── img/ # Изображения (логотипы, фото специалистов, работы) ├── pic/ # Материалы для отчета │ ├── video.gif # Видео демонстрации │ ├── home.png # Скриншот главной страницы │ ├── form.png # Скриншот формы │ └── price.png # Скриншот страницы услуг ├── db.php # Подключение к базе данных └── submit.php # Обработка формы записи Функциональность Форма записи на консультацию Форма включает:">
   <meta property="og:locale" content="ru-ru">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-01-15T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-01-15T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-09-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-09-20T00:00:00+00:00">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BC">
-<meta name="twitter:description" content="Ссылка на мой github с проектом
-Описание
-Технологии
-Особенности">
+<meta name="twitter:title" content="Beauty Club — Сайт студии красоты">
+<meta name="twitter:description" content="
+Демо
+Сайт: https://se.ifmo.ru/~s368382/bc/index.html
+Репозиторий: https://github.com/wizoomm/bc.git
+Описание проекта
+Учебный проект — веб-сайт для студии красоты &ldquo;Beauty Club&rdquo; — студии маникюра, педикюра и лазерной эпиляции, расположенной в Санкт-Петербурге. Сайт предоставляет полную информацию о студии, услугах, специалистах и позволяет клиентам оставлять заявки на консультацию.
+Основные возможности
+
+Адаптивный дизайн — сайт корректно отображается на всех устройствах (десктоп, планшет, мобильные)
+Интерактивная форма записи — валидация данных на клиенте и сервере
+Интеграция с базой данных — сохранение заявок в PostgreSQL
+Многостраничная структура — удобная навигация по разделам сайта
+Галерея работ — демонстрация портфолио студии
+Информация о специалистах — профили мастеров с опытом работы
+
+Технологический стек
+Frontend
+
+HTML5 — семантическая разметка
+CSS3 — стилизация с использованием кастомных шрифтов (Helvetica Neue)
+JavaScript (Vanilla) — интерактивность без фреймворков
+
+Валидация форм в реальном времени
+Маски ввода для телефона
+Управление состояниями формы (форма/успех)
+Адаптивное бургер-меню
+
+
+
+Backend
+
+PHP — обработка форм и работа с базой данных
+PostgreSQL — хранение заявок на консультацию
+
+Структура проекта
+bc/
+├── index.html              # Главная страница
+├── about.html              # О нас
+├── services.html           # Услуги и цены
+├── recording.html          # Страница записи
+├── shares.html             # Акции
+├── recommendations.html    # Рекомендации
+├── questions.html          # Вопросы и ответы
+├── gallery.html            # Галерея работ
+├── reviews.html            # Отзывы клиентов
+├── specialists.html        # Специалисты
+├── css/
+│   ├── normalize.css      # Сброс стилей
+│   └── styles.css          # Основные стили
+├── js/
+│   ├── booking.js          # Логика формы записи
+│   ├── burger.js            # Бургер-меню
+│   └── form-validation.js   # Валидация форм
+├── img/                    # Изображения (логотипы, фото специалистов, работы)
+├── pic/                    # Материалы для отчета
+│   ├── video.gif           # Видео демонстрации
+│   ├── home.png            # Скриншот главной страницы
+│   ├── form.png            # Скриншот формы
+│   └── price.png           # Скриншот страницы услуг
+├── db.php                  # Подключение к базе данных
+└── submit.php              # Обработка формы записи
+Функциональность
+Форма записи на консультацию
+Форма включает:">
 
 
 <script type="application/ld+json">
@@ -90,7 +213,7 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "BC",
+      "name": "Beauty Club — Сайт студии красоты",
       "item": "https://wizoomm.github.io/posts/bc/"
     }
   ]
@@ -100,17 +223,17 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "BC",
-  "name": "BC",
-  "description": "Ссылка на мой github с проектом\nОписание Технологии Особенности",
+  "headline": "Beauty Club — Сайт студии красоты",
+  "name": "Beauty Club — Сайт студии красоты",
+  "description": "\nДемо Сайт: https://se.ifmo.ru/~s368382/bc/index.html\nРепозиторий: https://github.com/wizoomm/bc.git\nОписание проекта Учебный проект — веб-сайт для студии красоты \u0026ldquo;Beauty Club\u0026rdquo; — студии маникюра, педикюра и лазерной эпиляции, расположенной в Санкт-Петербурге. Сайт предоставляет полную информацию о студии, услугах, специалистах и позволяет клиентам оставлять заявки на консультацию.\nОсновные возможности Адаптивный дизайн — сайт корректно отображается на всех устройствах (десктоп, планшет, мобильные) Интерактивная форма записи — валидация данных на клиенте и сервере Интеграция с базой данных — сохранение заявок в PostgreSQL Многостраничная структура — удобная навигация по разделам сайта Галерея работ — демонстрация портфолио студии Информация о специалистах — профили мастеров с опытом работы Технологический стек Frontend HTML5 — семантическая разметка CSS3 — стилизация с использованием кастомных шрифтов (Helvetica Neue) JavaScript (Vanilla) — интерактивность без фреймворков Валидация форм в реальном времени Маски ввода для телефона Управление состояниями формы (форма/успех) Адаптивное бургер-меню Backend PHP — обработка форм и работа с базой данных PostgreSQL — хранение заявок на консультацию Структура проекта bc/ ├── index.html # Главная страница ├── about.html # О нас ├── services.html # Услуги и цены ├── recording.html # Страница записи ├── shares.html # Акции ├── recommendations.html # Рекомендации ├── questions.html # Вопросы и ответы ├── gallery.html # Галерея работ ├── reviews.html # Отзывы клиентов ├── specialists.html # Специалисты ├── css/ │ ├── normalize.css # Сброс стилей │ └── styles.css # Основные стили ├── js/ │ ├── booking.js # Логика формы записи │ ├── burger.js # Бургер-меню │ └── form-validation.js # Валидация форм ├── img/ # Изображения (логотипы, фото специалистов, работы) ├── pic/ # Материалы для отчета │ ├── video.gif # Видео демонстрации │ ├── home.png # Скриншот главной страницы │ ├── form.png # Скриншот формы │ └── price.png # Скриншот страницы услуг ├── db.php # Подключение к базе данных └── submit.php # Обработка формы записи Функциональность Форма записи на консультацию Форма включает:\n",
   "keywords": [
     
   ],
-  "articleBody": "Ссылка на мой github с проектом\nОписание Технологии Особенности ",
-  "wordCount" : "9",
+  "articleBody": "\nДемо Сайт: https://se.ifmo.ru/~s368382/bc/index.html\nРепозиторий: https://github.com/wizoomm/bc.git\nОписание проекта Учебный проект — веб-сайт для студии красоты “Beauty Club” — студии маникюра, педикюра и лазерной эпиляции, расположенной в Санкт-Петербурге. Сайт предоставляет полную информацию о студии, услугах, специалистах и позволяет клиентам оставлять заявки на консультацию.\nОсновные возможности Адаптивный дизайн — сайт корректно отображается на всех устройствах (десктоп, планшет, мобильные) Интерактивная форма записи — валидация данных на клиенте и сервере Интеграция с базой данных — сохранение заявок в PostgreSQL Многостраничная структура — удобная навигация по разделам сайта Галерея работ — демонстрация портфолио студии Информация о специалистах — профили мастеров с опытом работы Технологический стек Frontend HTML5 — семантическая разметка CSS3 — стилизация с использованием кастомных шрифтов (Helvetica Neue) JavaScript (Vanilla) — интерактивность без фреймворков Валидация форм в реальном времени Маски ввода для телефона Управление состояниями формы (форма/успех) Адаптивное бургер-меню Backend PHP — обработка форм и работа с базой данных PostgreSQL — хранение заявок на консультацию Структура проекта bc/ ├── index.html # Главная страница ├── about.html # О нас ├── services.html # Услуги и цены ├── recording.html # Страница записи ├── shares.html # Акции ├── recommendations.html # Рекомендации ├── questions.html # Вопросы и ответы ├── gallery.html # Галерея работ ├── reviews.html # Отзывы клиентов ├── specialists.html # Специалисты ├── css/ │ ├── normalize.css # Сброс стилей │ └── styles.css # Основные стили ├── js/ │ ├── booking.js # Логика формы записи │ ├── burger.js # Бургер-меню │ └── form-validation.js # Валидация форм ├── img/ # Изображения (логотипы, фото специалистов, работы) ├── pic/ # Материалы для отчета │ ├── video.gif # Видео демонстрации │ ├── home.png # Скриншот главной страницы │ ├── form.png # Скриншот формы │ └── price.png # Скриншот страницы услуг ├── db.php # Подключение к базе данных └── submit.php # Обработка формы записи Функциональность Форма записи на консультацию Форма включает:\nВалидацию имени: только буквы, минимум 2 символа Валидацию телефона: 11 цифр, начинается с 7 или 8 Маски ввода: автоматическая фильтрация недопустимых символов Обработку состояний: форма → отправка → успех/ошибка Сохранение в БД: заявки сохраняются в таблицу consultations Адаптивная навигация Десктоп: горизонтальное меню в хедере Мобильные устройства: бургер-меню с анимацией Breadcrumbs на внутренних страницах Страницы сайта Главная — баннер, информация о студии, команда, услуги, галерея, отзывы О нас — подробная информация о студии, основателе, преимуществах Услуги — полный прайс-лист (маникюр, педикюр, лазерная эпиляция) Запись — форма для записи на консультацию Акции — текущие предложения и скидки Рекомендации — советы по уходу Вопросы — FAQ Галерея — портфолио работ Отзывы — отзывы клиентов Специалисты — профили мастеров Скриншоты Особенности реализации Валидация форм Клиентская валидация: проверка в реальном времени при вводе Серверная валидация: дополнительная проверка на стороне PHP UX улучшения: кнопка отправки активируется только при валидных данных Обработка ошибок: отображение сообщений об ошибках через URL-параметры Работа с базой данных // Структура таблицы consultations CREATE TABLE consultations ( id SERIAL PRIMARY KEY, full_name VARCHAR(255) NOT NULL, phone VARCHAR(20) NOT NULL, created_at TIMESTAMP DEFAULT NOW() ); Адаптивность Mobile-first подход Гибкая сетка (Grid/Flexbox) Оптимизация изображений Кастомные шрифты с fallback Результаты проекта Полностью функциональный многостраничный сайт Адаптивный дизайн для всех устройств Интеграция с базой данных Валидация и обработка форм Современный и чистый UI/UX Оптимизированный код без зависимостей Контакты студии Beauty Club\nПриморский проспект д.137 к.1, г. Санкт-Петербург\nПроект разработан для студии красоты “Beauty Club”\n",
+  "wordCount" : "533",
   "inLanguage": "en",
-  "datePublished": "2025-01-15T00:00:00Z",
-  "dateModified": "2025-01-15T00:00:00Z",
+  "datePublished": "2025-09-20T00:00:00Z",
+  "dateModified": "2025-09-20T00:00:00Z",
   "author":{
     "@type": "Person",
     "name": "wizoomm"
@@ -195,16 +318,143 @@
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      BC
+      Beauty Club — Сайт студии красоты
     </h1>
-    <div class="post-meta"><span title='2025-01-15 00:00:00 +0000 UTC'>January 15, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;wizoomm
+    <div class="post-meta"><span title='2025-09-20 00:00:00 +0000 UTC'>September 20, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;wizoomm
 
 </div>
   </header> 
-  <div class="post-content"><p>Ссылка на мой <a href="">github</a> с проектом</p>
-<h2 id="описание">Описание<a hidden class="anchor" aria-hidden="true" href="#описание">#</a></h2>
-<h2 id="технологии">Технологии<a hidden class="anchor" aria-hidden="true" href="#технологии">#</a></h2>
-<h2 id="особенности">Особенности<a hidden class="anchor" aria-hidden="true" href="#особенности">#</a></h2>
+  <div class="post-content"><p><img alt="Видео демонстрации сайта" loading="lazy" src="/images/video.gif"></p>
+<h2 id="демо">Демо<a hidden class="anchor" aria-hidden="true" href="#демо">#</a></h2>
+<p><strong>Сайт:</strong> <a href="https://se.ifmo.ru/~s368382/bc/index.html">https://se.ifmo.ru/~s368382/bc/index.html</a><br>
+<strong>Репозиторий:</strong> <a href="https://github.com/wizoomm/bc.git">https://github.com/wizoomm/bc.git</a></p>
+<h2 id="описание-проекта">Описание проекта<a hidden class="anchor" aria-hidden="true" href="#описание-проекта">#</a></h2>
+<p>Учебный проект — веб-сайт для студии красоты &ldquo;Beauty Club&rdquo; — студии маникюра, педикюра и лазерной эпиляции, расположенной в Санкт-Петербурге. Сайт предоставляет полную информацию о студии, услугах, специалистах и позволяет клиентам оставлять заявки на консультацию.</p>
+<h2 id="основные-возможности">Основные возможности<a hidden class="anchor" aria-hidden="true" href="#основные-возможности">#</a></h2>
+<ul>
+<li><strong>Адаптивный дизайн</strong> — сайт корректно отображается на всех устройствах (десктоп, планшет, мобильные)</li>
+<li><strong>Интерактивная форма записи</strong> — валидация данных на клиенте и сервере</li>
+<li><strong>Интеграция с базой данных</strong> — сохранение заявок в PostgreSQL</li>
+<li><strong>Многостраничная структура</strong> — удобная навигация по разделам сайта</li>
+<li><strong>Галерея работ</strong> — демонстрация портфолио студии</li>
+<li><strong>Информация о специалистах</strong> — профили мастеров с опытом работы</li>
+</ul>
+<h2 id="технологический-стек">Технологический стек<a hidden class="anchor" aria-hidden="true" href="#технологический-стек">#</a></h2>
+<h3 id="frontend">Frontend<a hidden class="anchor" aria-hidden="true" href="#frontend">#</a></h3>
+<ul>
+<li><strong>HTML5</strong> — семантическая разметка</li>
+<li><strong>CSS3</strong> — стилизация с использованием кастомных шрифтов (Helvetica Neue)</li>
+<li><strong>JavaScript (Vanilla)</strong> — интерактивность без фреймворков
+<ul>
+<li>Валидация форм в реальном времени</li>
+<li>Маски ввода для телефона</li>
+<li>Управление состояниями формы (форма/успех)</li>
+<li>Адаптивное бургер-меню</li>
+</ul>
+</li>
+</ul>
+<h3 id="backend">Backend<a hidden class="anchor" aria-hidden="true" href="#backend">#</a></h3>
+<ul>
+<li><strong>PHP</strong> — обработка форм и работа с базой данных</li>
+<li><strong>PostgreSQL</strong> — хранение заявок на консультацию</li>
+</ul>
+<h2 id="структура-проекта">Структура проекта<a hidden class="anchor" aria-hidden="true" href="#структура-проекта">#</a></h2>
+<pre tabindex="0"><code>bc/
+├── index.html              # Главная страница
+├── about.html              # О нас
+├── services.html           # Услуги и цены
+├── recording.html          # Страница записи
+├── shares.html             # Акции
+├── recommendations.html    # Рекомендации
+├── questions.html          # Вопросы и ответы
+├── gallery.html            # Галерея работ
+├── reviews.html            # Отзывы клиентов
+├── specialists.html        # Специалисты
+├── css/
+│   ├── normalize.css      # Сброс стилей
+│   └── styles.css          # Основные стили
+├── js/
+│   ├── booking.js          # Логика формы записи
+│   ├── burger.js            # Бургер-меню
+│   └── form-validation.js   # Валидация форм
+├── img/                    # Изображения (логотипы, фото специалистов, работы)
+├── pic/                    # Материалы для отчета
+│   ├── video.gif           # Видео демонстрации
+│   ├── home.png            # Скриншот главной страницы
+│   ├── form.png            # Скриншот формы
+│   └── price.png           # Скриншот страницы услуг
+├── db.php                  # Подключение к базе данных
+└── submit.php              # Обработка формы записи
+</code></pre><h2 id="функциональность">Функциональность<a hidden class="anchor" aria-hidden="true" href="#функциональность">#</a></h2>
+<h3 id="форма-записи-на-консультацию">Форма записи на консультацию<a hidden class="anchor" aria-hidden="true" href="#форма-записи-на-консультацию">#</a></h3>
+<p>Форма включает:</p>
+<ul>
+<li><strong>Валидацию имени</strong>: только буквы, минимум 2 символа</li>
+<li><strong>Валидацию телефона</strong>: 11 цифр, начинается с 7 или 8</li>
+<li><strong>Маски ввода</strong>: автоматическая фильтрация недопустимых символов</li>
+<li><strong>Обработку состояний</strong>: форма → отправка → успех/ошибка</li>
+<li><strong>Сохранение в БД</strong>: заявки сохраняются в таблицу <code>consultations</code></li>
+</ul>
+<h3 id="адаптивная-навигация">Адаптивная навигация<a hidden class="anchor" aria-hidden="true" href="#адаптивная-навигация">#</a></h3>
+<ul>
+<li>Десктоп: горизонтальное меню в хедере</li>
+<li>Мобильные устройства: бургер-меню с анимацией</li>
+<li>Breadcrumbs на внутренних страницах</li>
+</ul>
+<h3 id="страницы-сайта">Страницы сайта<a hidden class="anchor" aria-hidden="true" href="#страницы-сайта">#</a></h3>
+<ol>
+<li><strong>Главная</strong> — баннер, информация о студии, команда, услуги, галерея, отзывы</li>
+<li><strong>О нас</strong> — подробная информация о студии, основателе, преимуществах</li>
+<li><strong>Услуги</strong> — полный прайс-лист (маникюр, педикюр, лазерная эпиляция)</li>
+<li><strong>Запись</strong> — форма для записи на консультацию</li>
+<li><strong>Акции</strong> — текущие предложения и скидки</li>
+<li><strong>Рекомендации</strong> — советы по уходу</li>
+<li><strong>Вопросы</strong> — FAQ</li>
+<li><strong>Галерея</strong> — портфолио работ</li>
+<li><strong>Отзывы</strong> — отзывы клиентов</li>
+<li><strong>Специалисты</strong> — профили мастеров</li>
+</ol>
+<h2 id="скриншоты">Скриншоты<a hidden class="anchor" aria-hidden="true" href="#скриншоты">#</a></h2>
+<p><img alt="Главная страница" loading="lazy" src="/images/home2.png"></p>
+<p><img alt="Форма записи" loading="lazy" src="/images/form.png"></p>
+<p><img alt="Страница услуг" loading="lazy" src="/images/price.png"></p>
+<h2 id="особенности-реализации">Особенности реализации<a hidden class="anchor" aria-hidden="true" href="#особенности-реализации">#</a></h2>
+<h3 id="валидация-форм">Валидация форм<a hidden class="anchor" aria-hidden="true" href="#валидация-форм">#</a></h3>
+<ul>
+<li><strong>Клиентская валидация</strong>: проверка в реальном времени при вводе</li>
+<li><strong>Серверная валидация</strong>: дополнительная проверка на стороне PHP</li>
+<li><strong>UX улучшения</strong>: кнопка отправки активируется только при валидных данных</li>
+<li><strong>Обработка ошибок</strong>: отображение сообщений об ошибках через URL-параметры</li>
+</ul>
+<h3 id="работа-с-базой-данных">Работа с базой данных<a hidden class="anchor" aria-hidden="true" href="#работа-с-базой-данных">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// Структура таблицы consultations
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">CREATE</span> <span style="color:#a6e22e">TABLE</span> <span style="color:#a6e22e">consultations</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">id</span> <span style="color:#a6e22e">SERIAL</span> <span style="color:#a6e22e">PRIMARY</span> <span style="color:#a6e22e">KEY</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">full_name</span> <span style="color:#a6e22e">VARCHAR</span>(<span style="color:#ae81ff">255</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">phone</span> <span style="color:#a6e22e">VARCHAR</span>(<span style="color:#ae81ff">20</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">created_at</span> <span style="color:#a6e22e">TIMESTAMP</span> <span style="color:#66d9ef">DEFAULT</span> <span style="color:#a6e22e">NOW</span>()
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><h3 id="адаптивность">Адаптивность<a hidden class="anchor" aria-hidden="true" href="#адаптивность">#</a></h3>
+<ul>
+<li>Mobile-first подход</li>
+<li>Гибкая сетка (Grid/Flexbox)</li>
+<li>Оптимизация изображений</li>
+<li>Кастомные шрифты с fallback</li>
+</ul>
+<h2 id="результаты-проекта">Результаты проекта<a hidden class="anchor" aria-hidden="true" href="#результаты-проекта">#</a></h2>
+<ul>
+<li>Полностью функциональный многостраничный сайт</li>
+<li>Адаптивный дизайн для всех устройств</li>
+<li>Интеграция с базой данных</li>
+<li>Валидация и обработка форм</li>
+<li>Современный и чистый UI/UX</li>
+<li>Оптимизированный код без зависимостей</li>
+</ul>
+<h2 id="контакты-студии">Контакты студии<a hidden class="anchor" aria-hidden="true" href="#контакты-студии">#</a></h2>
+<p><strong>Beauty Club</strong><br>
+Приморский проспект д.137 к.1, г. Санкт-Петербург</p>
+<hr>
+<p><em>Проект разработан для студии красоты &ldquo;Beauty Club&rdquo;</em></p>
 
 
   </div>

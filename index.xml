@@ -72,14 +72,74 @@
 &lt;/ul&gt;</description>
     </item>
     <item>
-      <title>BC</title>
+      <title>Beauty Club — Сайт студии красоты</title>
       <link>https://wizoomm.github.io/posts/bc/</link>
-      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
       <guid>https://wizoomm.github.io/posts/bc/</guid>
-      <description>&lt;p&gt;Ссылка на мой &lt;a href=&#34;&#34;&gt;github&lt;/a&gt; с проектом&lt;/p&gt;
-&lt;h2 id=&#34;описание&#34;&gt;Описание&lt;/h2&gt;
-&lt;h2 id=&#34;технологии&#34;&gt;Технологии&lt;/h2&gt;
-&lt;h2 id=&#34;особенности&#34;&gt;Особенности&lt;/h2&gt;</description>
+      <description>&lt;p&gt;&lt;img alt=&#34;Видео демонстрации сайта&#34; loading=&#34;lazy&#34; src=&#34;https://wizoomm.github.io/images/video.gif&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;демо&#34;&gt;Демо&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Сайт:&lt;/strong&gt; &lt;a href=&#34;https://se.ifmo.ru/~s368382/bc/index.html&#34;&gt;https://se.ifmo.ru/~s368382/bc/index.html&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Репозиторий:&lt;/strong&gt; &lt;a href=&#34;https://github.com/wizoomm/bc.git&#34;&gt;https://github.com/wizoomm/bc.git&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;описание-проекта&#34;&gt;Описание проекта&lt;/h2&gt;
+&lt;p&gt;Учебный проект — веб-сайт для студии красоты &amp;ldquo;Beauty Club&amp;rdquo; — студии маникюра, педикюра и лазерной эпиляции, расположенной в Санкт-Петербурге. Сайт предоставляет полную информацию о студии, услугах, специалистах и позволяет клиентам оставлять заявки на консультацию.&lt;/p&gt;
+&lt;h2 id=&#34;основные-возможности&#34;&gt;Основные возможности&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Адаптивный дизайн&lt;/strong&gt; — сайт корректно отображается на всех устройствах (десктоп, планшет, мобильные)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Интерактивная форма записи&lt;/strong&gt; — валидация данных на клиенте и сервере&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Интеграция с базой данных&lt;/strong&gt; — сохранение заявок в PostgreSQL&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Многостраничная структура&lt;/strong&gt; — удобная навигация по разделам сайта&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Галерея работ&lt;/strong&gt; — демонстрация портфолио студии&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Информация о специалистах&lt;/strong&gt; — профили мастеров с опытом работы&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;технологический-стек&#34;&gt;Технологический стек&lt;/h2&gt;
+&lt;h3 id=&#34;frontend&#34;&gt;Frontend&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HTML5&lt;/strong&gt; — семантическая разметка&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CSS3&lt;/strong&gt; — стилизация с использованием кастомных шрифтов (Helvetica Neue)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript (Vanilla)&lt;/strong&gt; — интерактивность без фреймворков
+&lt;ul&gt;
+&lt;li&gt;Валидация форм в реальном времени&lt;/li&gt;
+&lt;li&gt;Маски ввода для телефона&lt;/li&gt;
+&lt;li&gt;Управление состояниями формы (форма/успех)&lt;/li&gt;
+&lt;li&gt;Адаптивное бургер-меню&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;backend&#34;&gt;Backend&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PHP&lt;/strong&gt; — обработка форм и работа с базой данных&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PostgreSQL&lt;/strong&gt; — хранение заявок на консультацию&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;структура-проекта&#34;&gt;Структура проекта&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bc/
+├── index.html              # Главная страница
+├── about.html              # О нас
+├── services.html           # Услуги и цены
+├── recording.html          # Страница записи
+├── shares.html             # Акции
+├── recommendations.html    # Рекомендации
+├── questions.html          # Вопросы и ответы
+├── gallery.html            # Галерея работ
+├── reviews.html            # Отзывы клиентов
+├── specialists.html        # Специалисты
+├── css/
+│   ├── normalize.css      # Сброс стилей
+│   └── styles.css          # Основные стили
+├── js/
+│   ├── booking.js          # Логика формы записи
+│   ├── burger.js            # Бургер-меню
+│   └── form-validation.js   # Валидация форм
+├── img/                    # Изображения (логотипы, фото специалистов, работы)
+├── pic/                    # Материалы для отчета
+│   ├── video.gif           # Видео демонстрации
+│   ├── home.png            # Скриншот главной страницы
+│   ├── form.png            # Скриншот формы
+│   └── price.png           # Скриншот страницы услуг
+├── db.php                  # Подключение к базе данных
+└── submit.php              # Обработка формы записи
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;функциональность&#34;&gt;Функциональность&lt;/h2&gt;
+&lt;h3 id=&#34;форма-записи-на-консультацию&#34;&gt;Форма записи на консультацию&lt;/h3&gt;
+&lt;p&gt;Форма включает:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
